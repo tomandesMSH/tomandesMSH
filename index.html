@@ -4,16 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="theme-color" content="#080b14">
-  <meta name="author" content="tomandesMSH — GOTTA GO FAST 🦔">
   <title>tomandesMSH</title>
-  <!--
-    ╔══════════════════════════════════════════╗
-    ║  🔵  GOTTA GO FAST  🔵                  ║
-    ║  → Konami Code: ↑ ↑ ↓ ↓ ← → ← → B A   ║
-    ║  → Napiš "sonic" kdekoliv na stránce    ║
-    ║  → Klikni 5× rychle na název nahoře     ║
-    ╚══════════════════════════════════════════╝
-  -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -47,8 +38,6 @@
   </header>
 
   <main>
-
-    <!-- ░░ HERO ░░ -->
     <section class="hero" id="hero">
       <div class="orb orb-1"></div>
       <div class="orb orb-2"></div>
@@ -56,101 +45,48 @@
       <div class="hero-content">
         <h1 id="hero-name">tomandesMSH</h1>
         <p class="tagline"><i>Fixing what shouldn't be broken,<br>making what should've been made.</i></p>
-        <div class="hero-badges">
-          <span class="badge">Windows</span>
-          <span class="badge">Python</span>
-          <span class="badge">JavaScript</span>
-          <span class="badge">Electron</span>
-        </div>
       </div>
       <a href="#projects" class="scroll-indicator" aria-label="Scroll down">
         <span class="chevron"></span>
       </a>
     </section>
-
-    <!-- ░░ PROJECTS ░░ -->
     <section class="content-section" id="projects">
 
       <h2 class="section-title">Windows Software</h2>
-      <div class="projects-grid">
-
-        <article class="project-card reveal">
-          <div class="card-header">
-            <span class="card-icon">🪟</span>
-            <span class="card-tag">Electron</span>
-          </div>
-          <h3><a href="https://github.com/tomandesMSH/KASPAR" target="_blank" rel="noopener">KASPAR</a></h3>
-          <p>Windows debloater &amp; tweaking suite — remove bloatware and fine-tune your system.</p>
-          <a href="https://tomandesmsh.github.io/KASPARDocs/" class="card-link" target="_blank" rel="noopener">Documentation →</a>
-        </article>
-
-        <article class="project-card reveal">
-          <div class="card-header">
-            <span class="card-icon">⚙️</span>
-            <span class="card-tag">Python</span>
-          </div>
-          <h3><a href="https://github.com/tomandesMSH/Custom-AutoPlay" target="_blank" rel="noopener">Custom-AutoPlay</a></h3>
-          <p>Windows AutoPlay registry automation — define exactly what happens when you plug in a device.</p>
-          <a href="https://tomandesmsh.github.io/Custom-AutoPlay-Docs/" class="card-link" target="_blank" rel="noopener">Documentation →</a>
-        </article>
-
-      </div>
+      <ul class="project-list">
+        <li><a href="https://github.com/tomandesMSH/KASPAR">KASPAR</a> - Windows debloater &amp; tweaking suite (Electron)
+          <ul>
+            <li><a href="https://tomandesmsh.github.io/KASPARDocs/">Documentation</a></li>
+          </ul>
+        </li>
+        <li><a href="https://github.com/tomandesMSH/Custom-AutoPlay">Custom-AutoPlay</a> - Windows AutoPlay registry automation tool (Python)
+          <ul>
+            <li><a href="https://tomandesmsh.github.io/Custom-AutoPlay-Docs/">Documentation</a></li>
+          </ul>
+        </li>
+      </ul>
 
       <h2 class="section-title">Web Projects</h2>
-      <div class="projects-grid">
-
-        <article class="project-card sonic-card reveal">
-          <div class="card-header">
-            <span class="card-icon">🌐</span>
-            <span class="card-tag sonic-tag">Web</span>
-          </div>
-          <h3><a href="https://tomandesmsh.github.io/SonicDecomp/" target="_blank" rel="noopener">Sonic Decompilation</a></h3>
-          <p>Teaches how to legally build and run Sonic Decompilations from source.</p>
-          <div class="sonic-rings" aria-hidden="true">
-            <span>⭕</span><span>⭕</span><span>⭕</span>
-          </div>
-        </article>
-
-      </div>
+      <ul class="project-list">
+        <li><a href="https://tomandesmsh.github.io/SonicDecomp/">Sonic Decompilation</a> - Teaches how to build Sonic Decompilations the legal way.</li>
+      </ul>
 
       <h2 class="section-title">Other</h2>
-      <div class="projects-grid">
+      <ul class="project-list">
+        <li><a href="https://github.com/tomandesMSH/WASDUndertale">WASDUndertale</a> - Use WASD in games that only support arrow keys. (Python)</li>
+      </ul>
 
-        <article class="project-card reveal">
-          <div class="card-header">
-            <span class="card-icon">🎮</span>
-            <span class="card-tag">Python</span>
-          </div>
-          <h3><a href="https://github.com/tomandesMSH/WASDUndertale" target="_blank" rel="noopener">WASDUndertale</a></h3>
-          <p>Use WASD in games that only support arrow keys — works great with Undertale and more.</p>
-        </article>
-
-      </div>
     </section>
 
-    <!-- ░░ WIP ░░ -->
     <section class="content-section" id="wip">
       <h2 class="section-title">Currently Working On</h2>
-      <div class="projects-grid">
-
-        <article class="project-card wip-card reveal">
-          <div class="card-header">
-            <span class="card-icon">🔧</span>
-            <span class="card-tag wip-tag">WIP</span>
-          </div>
-          <h3><a href="#">P2P Messaging App</a></h3>
-          <p>Peer-to-peer messenger — no central server, just you and whoever you're talking to.</p>
-          <div class="progress-bar" title="~30% complete">
-            <div class="progress-fill"></div>
-          </div>
-        </article>
-
-      </div>
+      <ul class="project-list">
+        <li><a href="#">P2P messaging app</a> - peer-to-peer messenger</li>
+      </ul>
     </section>
 
   </main>
 
-  <!-- ░░ FOOTER ░░ -->
   <footer id="contact">
     <div class="footer-inner">
       <p class="footer-eyebrow">Get in touch</p>
@@ -158,37 +94,23 @@
         <a href="https://github.com/tomandesMSH" target="_blank" rel="noopener" class="social-link">GitHub</a>
         <a href="https://www.instagram.com/thom.vaa/" target="_blank" rel="noopener" class="social-link">Instagram</a>
         <a href="mailto:tomandes@tuta.io" class="social-link">Email</a>
-        <a href="https://x.com/thom_vaa" target="_blank" rel="noopener" class="social-link">Twitter / X</a>
+        <a href="https://x.com/thom_vaa" target="_blank" rel="noopener" class="social-link">Twitter</a>
         <a href="https://www.youtube.com/@tomandes" target="_blank" rel="noopener" class="social-link">YouTube</a>
         <span class="social-link discord" title="thom.va">Discord: thom.va</span>
       </div>
-      <p class="footer-tip">// hint: open the browser console 🔵</p>
     </div>
   </footer>
 
   <script>
-    /* ════════════════════════════════════════════
-       SONIC EASTER EGGS
-       ════════════════════════════════════════════ */
 
-    // Console drop
-    console.log('%c 🔵  GOTTA GO FAST  🔵 ', 'background:#0066cc;color:#FFD700;font-size:22px;padding:12px 24px;border-radius:8px;font-weight:bold;letter-spacing:3px;');
-    console.log('%c → Konami Code:  ↑ ↑ ↓ ↓ ← → ← → B A', 'color:#7dd3fc;font-size:13px;padding:4px 0;');
-    console.log('%c → Napiš "sonic" kdekoliv na stránce', 'color:#94a3b8;font-size:12px;padding:4px 0;');
-    console.log('%c → Klikni 5× rychle na název nahoře', 'color:#64748b;font-size:11px;padding:4px 0;');
-    console.log('%c → Podepiš nad Sonic kartou 3 sekundy…', 'color:#475569;font-size:10px;padding:4px 0;');
-
-    // ── Konami Code ───────────────────────────────────────────────────────
     const KONAMI = ['ArrowUp','ArrowUp','ArrowDown','ArrowDown',
                     'ArrowLeft','ArrowRight','ArrowLeft','ArrowRight','b','a'];
     let konamiIdx = 0;
     document.addEventListener('keydown', e => {
       konamiIdx = (e.key === KONAMI[konamiIdx]) ? konamiIdx + 1 : (e.key === KONAMI[0] ? 1 : 0);
       if (konamiIdx === KONAMI.length) { triggerSonicRun(); konamiIdx = 0; }
-    });
 
-    // ── Type "sonic" ──────────────────────────────────────────────────────
-    let keyBuf = '';
+      let keyBuf = '';
     document.addEventListener('keypress', e => {
       keyBuf = (keyBuf + e.key.toLowerCase()).slice(-8);
       if (keyBuf.includes('sonic')) {
@@ -199,7 +121,6 @@
       }
     });
 
-    // ── Click title 5× ────────────────────────────────────────────────────
     let titleClicks = 0, titleTimer;
     document.getElementById('hero-name').addEventListener('click', () => {
       addRings(1);
@@ -209,15 +130,6 @@
       if (titleClicks >= 5) { titleClicks = 0; triggerSonicRun(); }
     });
 
-    // ── Hover Sonic card 3s ───────────────────────────────────────────────
-    const sonicCard = document.querySelector('.sonic-card');
-    let sonicHoverTimer;
-    sonicCard.addEventListener('mouseenter', () => {
-      sonicHoverTimer = setTimeout(triggerSonicRun, 3000);
-    });
-    sonicCard.addEventListener('mouseleave', () => clearTimeout(sonicHoverTimer));
-
-    // ── Core functions ────────────────────────────────────────────────────
     const sonicSfx = new Audio('sprites/youre-too-slow.mp3');
     sonicSfx.volume = 0.55;
 
@@ -263,22 +175,6 @@
       setTimeout(() => p.remove(), 800);
     }
 
-    // ── Scroll reveal ─────────────────────────────────────────────────────
-    const revealObs = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          revealObs.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
-
-    document.querySelectorAll('.reveal').forEach((el, i) => {
-      el.style.transitionDelay = (i % 4 * 90) + 'ms';
-      revealObs.observe(el);
-    });
-
-    // ── Navbar scroll blur ────────────────────────────────────────────────
     const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => {
       navbar.classList.toggle('scrolled', window.scrollY > 20);
@@ -286,10 +182,6 @@
   </script>
 
   <script>
-  /* ═══════════════════════════════════════════════════════════════════
-     GAME BACKGROUND CANVAS  — PNG sprite logos
-     Sonic ring · Undertale SOUL · Deltarune · GD cube · Isaac Repentance
-     ═══════════════════════════════════════════════════════════════════ */
   (function () {
     const canvas = document.getElementById('bg-canvas');
     const ctx    = canvas.getContext('2d');
@@ -302,7 +194,6 @@
     resize();
     window.addEventListener('resize', () => { resize(); resetParticles(); }, { passive: true });
 
-    // ── load sprites ──────────────────────────────────────────────────
     const SPRITE_SRCS = {
       ring:  'sprites/sonicring.png',
       soul:  'sprites/soul.png',
@@ -314,7 +205,7 @@
     Object.entries(SPRITE_SRCS).forEach(([key, src]) => {
       const img = new Image();
       img.onload  = () => { SPRITES[key] = img; };
-      img.onerror = () => { console.warn('Could not load sprite:', src); };
+      img.onerror = () => {};
       img.src = src;
     });
 
@@ -348,14 +239,12 @@
     }
     resetParticles();
 
-    /* ── draw PNG sprite centred at origin ───────────────────── */
     function drawSprite(key, s) {
       const img = SPRITES[key];
       if (!img) return;
       ctx.drawImage(img, -s, -s, s * 2, s * 2);
     }
 
-    /* ── animation loop ──────────────────────────────────────── */
     function frame() {
       ctx.clearRect(0, 0, W, H);
       for (let i = 0; i < particles.length; i++) {
@@ -368,13 +257,7 @@
         ctx.translate(p.x, p.y);
         ctx.rotate(p.rot);
         ctx.globalAlpha = p.alpha;
-        switch (p.type) {
-          case 'ring':  drawSprite('ring',  p.size); break;
-          case 'soul':  drawSprite('soul',  p.size); break;
-          case 'delta': drawSprite('delta', p.size); break;
-          case 'cube':  drawSprite('cube',  p.size); break;
-          case 'isaac': drawSprite('isaac', p.size); break;
-        }
+        drawSprite(p.type, p.size);
         ctx.restore();
       }
       requestAnimationFrame(frame);
