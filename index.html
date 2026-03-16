@@ -14,7 +14,6 @@
 
   <canvas id="bg-canvas" aria-hidden="true"></canvas>
 
-  <!-- ░░ SONIC EASTER EGGS ░░ -->
   <div id="sonic-runner" aria-hidden="true">
     <img class="sonic-sprite" src="sprites/running.gif" alt="" width="64" height="64">
     <span class="sonic-text">GOTTA GO FAST!</span>
@@ -73,7 +72,7 @@
 
       <h2 class="section-title">Other</h2>
       <ul class="project-list">
-        <li><a href="https://github.com/tomandesMSH/WASDUndertale">WASDUndertale</a> - Use WASD in games that only support arrow keys. (Python)</li>
+        <li><a href="https://github.com/tomandesMSH/WASD-to-arrows">WASD-to-arrows</a> - Use WASD in games that only support arrow keys. (Python)</li>
       </ul>
 
     </section>
@@ -109,8 +108,9 @@
     document.addEventListener('keydown', e => {
       konamiIdx = (e.key === KONAMI[konamiIdx]) ? konamiIdx + 1 : (e.key === KONAMI[0] ? 1 : 0);
       if (konamiIdx === KONAMI.length) { triggerSonicRun(); konamiIdx = 0; }
+    });
 
-      let keyBuf = '';
+    let keyBuf = '';
     document.addEventListener('keypress', e => {
       keyBuf = (keyBuf + e.key.toLowerCase()).slice(-8);
       if (keyBuf.includes('sonic')) {
