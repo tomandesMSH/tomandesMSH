@@ -35,16 +35,6 @@ body {
 ::-webkit-scrollbar-thumb:hover { background: var(--blue-accent); }
 ::selection { background: rgba(37, 99, 235, 0.3); color: var(--text); }
 
-/* ─── Game Background Canvas ────────────────────────────────────────────── */
-#bg-canvas {
-  position: fixed;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  pointer-events: none;
-}
-
 /* ─── Navigation ─────────────────────────────────────────────────────────── */
 header {
   position: fixed;
@@ -192,6 +182,16 @@ h1:hover { filter: drop-shadow(0 0 24px rgba(59, 130, 246, 0.45)); }
 .content-section:last-of-type { padding-bottom: 6rem; }
 
 /* ─── Section titles ─────────────────────────────────────────────────────── */
+.page-title {
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text);
+  margin-bottom: 1.6rem;
+  margin-top: 3rem;
+}
+.page-title:first-of-type { margin-top: 0; }
+
 .section-title {
   font-size: 0.85rem;
   font-weight: 600;
@@ -210,6 +210,14 @@ h1:hover { filter: drop-shadow(0 0 24px rgba(59, 130, 246, 0.45)); }
   flex: 1;
   height: 1px;
   background: linear-gradient(90deg, var(--border) 0%, transparent 100%);
+}
+
+/* ─── About ──────────────────────────────────────────────────────────────── */
+.about-text {
+  font-size: 1.05rem;
+  color: var(--text-sub);
+  line-height: 1.9;
+  max-width: 680px;
 }
 
 /* ─── Project list (original style) ─────────────────────────────────────── */
@@ -282,76 +290,146 @@ footer {
 .social-link:not(.discord):hover::after { width: 100%; }
 .social-link.discord { cursor: default; }
 
-/* ─── Easter Egg: Sonic Runner ───────────────────────────────────────────── */
-#sonic-runner {
-  position: fixed;
-  bottom: 60px;
-  left: -300px;
-  z-index: 9999;
+/* ─── Gallery ────────────────────────────────────────────────────────────── */
+.gallery-row {
+  margin-bottom: 2.5rem;
+}
+.gallery-row:last-of-type {
+  margin-bottom: 0;
+}
+.gallery-caption {
+  font-size: 1rem;
+  color: var(--text-sub);
+  line-height: 1.6;
+  margin-bottom: 0.9rem;
+}
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.9rem;
+}
+.gallery-item {
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  transition: border-color 0.2s, transform 0.2s;
+  overflow: hidden;
+}
+.gallery-item:hover {
+  border-color: var(--blue-mid);
+  transform: translateY(-2px);
+}
+.gallery-item img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+}
+.gallery-link {
+  position: relative;
+  display: block;
+}
+.gallery-link-icon {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 26px;
+  height: 26px;
   display: flex;
   align-items: center;
-  gap: 0.4rem;
-  pointer-events: none;
-  opacity: 0;
+  justify-content: center;
+  background: rgba(8, 11, 20, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 6px;
+  color: var(--text);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  transition: background 0.2s, border-color 0.2s;
 }
-#sonic-runner.running {
-  animation: sonicRun 2.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
-  opacity: 1;
+.gallery-link-icon svg {
+  width: 14px;
+  height: 14px;
 }
-.sonic-sprite {
-  display: inline-block;
-  width: 64px; height: 64px;
-  object-fit: contain;
-  image-rendering: pixelated;
+.gallery-link:hover .gallery-link-icon {
+  background: var(--blue-accent);
+  border-color: var(--blue-accent);
 }
-.sonic-text {
+.gallery-link-icon::after {
+  content: attr(data-label);
+  position: absolute;
+  top: 50%;
+  right: calc(100% + 8px);
+  transform: translateY(-50%) translateX(4px);
   font-family: var(--mono);
-  font-size: 0.85rem;
-  font-weight: 700;
-  color: var(--gold);
-  text-shadow: 0 0 14px rgba(255,215,0,0.75);
-  white-space: nowrap;
-  letter-spacing: 0.08em;
-}
-
-/* ─── Easter Egg: Ring Counter ───────────────────────────────────────────── */
-#ring-counter {
-  position: fixed;
-  top: 80px;
-  right: -180px;
-  z-index: 9999;
+  font-size: 0.72rem;
+  color: var(--text);
   background: rgba(8, 11, 20, 0.92);
-  border: 1px solid rgba(255,215,0,0.35);
-  border-radius: 10px;
-  padding: 0.4rem 0.9rem;
-  display: flex;
-  align-items: center;
-  gap: 0.45rem;
-  font-family: var(--mono);
-  font-size: 0.88rem;
-  font-weight: 500;
-  color: var(--gold);
-  transition: right 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
+  border: 1px solid var(--border);
+  padding: 0.3rem 0.55rem;
+  border-radius: 6px;
+  white-space: nowrap;
+  opacity: 0;
   pointer-events: none;
-  backdrop-filter: blur(8px);
+  transition: opacity 0.18s, transform 0.18s;
 }
-#ring-counter.visible { right: 16px; }
-.ring-icon { font-size: 1rem; animation: spinRing 1.2s linear infinite; }
+.gallery-link:hover .gallery-link-icon::after,
+.gallery-link:focus-visible .gallery-link-icon::after {
+  opacity: 1;
+  transform: translateY(-50%) translateX(0);
+}
+.gallery-item-caption {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  color: var(--text-sub);
+  text-align: center;
+  padding: 0.5rem 0.4rem;
+  line-height: 1.4;
+}
+.gallery-item:not(:has(img)) {
+  aspect-ratio: 1 / 1;
+}
+.gallery-grid-certs {
+  grid-template-columns: repeat(2, 1fr);
+}
+.gallery-grid-certs .gallery-item img,
+.gallery-grid-certs .gallery-item:not(:has(img)) {
+  aspect-ratio: 919 / 617;
+}
 
-/* ─── Easter Egg: Speed Lines ────────────────────────────────────────────── */
-#speed-lines {
+/* ─── Lightbox ───────────────────────────────────────────────────────────── */
+.lightbox {
   position: fixed;
   inset: 0;
-  z-index: 9998;
-  pointer-events: none;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(5, 7, 13, 0.92);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
   opacity: 0;
-  background: repeating-linear-gradient(
-    90deg,
-    transparent 0px, transparent 38px,
-    rgba(37, 99, 235, 0.04) 38px, rgba(37, 99, 235, 0.04) 40px
-  );
+  visibility: hidden;
+  transition: opacity 0.25s ease;
+  padding: 3rem;
 }
-#speed-lines.active { animation: speedFlash 0.55s ease forwards; }
+.lightbox.open {
+  opacity: 1;
+  visibility: visible;
+}
+.lightbox img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 8px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  cursor: zoom-out;
+  transform: scale(0.96);
+  transition: transform 0.25s ease;
+}
+.lightbox.open img {
+  transform: scale(1);
+}
 
 /* ─── Keyframes ──────────────────────────────────────────────────────────── */
 @keyframes slideDown {
@@ -375,23 +453,6 @@ footer {
   33%       { transform: translate(30px, -25px); }
   66%       { transform: translate(-20px, 15px); }
 }
-@keyframes spinRing {
-  from { transform: rotateY(0deg);   }
-  to   { transform: rotateY(360deg); }
-}
-@keyframes sonicRun {
-  0%   { left: -280px; }
-  100% { left: calc(100vw + 280px); }
-}
-@keyframes speedFlash {
-  0%   { opacity: 0; }
-  25%  { opacity: 1; }
-  100% { opacity: 0; }
-}
-@keyframes ringFly {
-  0%   { opacity: 1; transform: translate(-50%, -50%) scale(1);    }
-  100% { opacity: 0; transform: translate(-50%, -260%) scale(0.2); }
-}
 
 /* ─── Responsive ─────────────────────────────────────────────────────────── */
 @media (max-width: 768px) {
@@ -402,4 +463,5 @@ footer {
   .section-title { margin-top: 2.5rem; }
   .social-links { gap: 1.2rem; }
   footer { padding: 2.5rem 1.25rem 3rem; }
+  .gallery-grid, .gallery-grid-certs { grid-template-columns: repeat(2, 1fr); gap: 0.6rem; }
 }
