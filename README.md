@@ -4,9 +4,6 @@
 
 <br/>
 
-<a href="http://tomandesMSH.github.io/tomandesMSH">
-  <img src="https://github.com/tomandesMSH/tomandesMSH/blob/main/gallery/logo.png?raw=true" width="120">
-</a>
 
 <br/><br/>
 
@@ -16,7 +13,7 @@
 
 </div>
 
-## A Little About Me
+## About Me
 
 #### Zajímám se o technologie, vývoj softwaru a herní design.
 
@@ -24,15 +21,15 @@
 
 ##### Baví mě místa, kde se potkává kreativita s technikou, ať už jde o herní mechaniky, interaktivní weby nebo 3D grafiku.
 
-##### Jsem rhythm game hráč 🎵, občasný modder 🛠️ a systémový nerd: registry, gpedit a podobné programy se zastaralým GUI jsou pro mě denním chlebem 🍞.
+##### Jsem rhythm game hráč, občasný modder a systémový nerd: registry, gpedit a podobné programy se zastaralým GUI jsou pro mě denním chlebem.
 
 ## Current focus
 
-- 🌐 Interaktivní stránky a projekty v HTML/CSS/JS
-- 🐍 Programování v Pythonu a C#, základy OOP a herní logiky
-- 🧊 3D grafika — modelování a materiály v Blenderu
-- 🎮 Herní design — mechaniky, level design
-- ⚙️ Správa OS a úprava registrů
+- Interaktivní stránky a projekty v HTML/CSS/JS
+- Programování v Pythonu a C#, základy OOP a herní logiky
+- 3D grafika, modelování a materiály v Blenderu
+- Herní design, mechaniky, level design
+- Správa OS a úprava registrů
 
 ### Tech Stack
 
