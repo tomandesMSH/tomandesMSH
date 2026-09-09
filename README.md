@@ -43,8 +43,6 @@
 
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/tomandesMSH/tomandesMSH/output/github-contribution-grid-snake-dark.svg" width="100%" />
-
 <img src="https://capsule-render.vercel.app/api?type=waving&color=E71D29&height=120&section=footer" width="100%" />
 
 </div>
