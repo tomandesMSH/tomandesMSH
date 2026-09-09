@@ -1,29 +1,53 @@
 <div align="center">
-  <a href="http://tomandesMSH.github.io/tomandesMSH">
-    <img src="https://github.com/tomandesMSH/tomandesMSH/blob/main/gallery/logo.png?raw=true">
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=E71D29&height=180&section=header&text=Tomáš%20Vaněk&fontSize=65&fontColor=ffffff&animation=fadeIn&fontAlignY=40" width="100%" />
+
+<br/>
+
+<a href="http://tomandesMSH.github.io/tomandesMSH">
+  <img src="https://github.com/tomandesMSH/tomandesMSH/blob/main/gallery/logo.png?raw=true" width="120">
 </a>
+
+<br/><br/>
+
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=28&duration=3000&pause=1200&color=E71D29&center=true&vCenter=true&width=750&lines=Software+%26+Game+Design+Enthusiast;Tvorim+weby+v+HTML%2FCSS%2FJS;Experimentuji+s+Pythonem+a+C%23;Obcas+carujii+s+Assembly+kodem+%F0%9F%A7%99;Rhythm+game+hrac+%F0%9F%8E%B5" alt="Typing SVG" />
+
+<br/>
+
 </div>
 
-# Tomáš Vaněk
+## A Little About Me
 
-Zajímám se o technologie, vývoj softwaru a herní design. Tvořím webové projekty v HTML/CSS/JS, experimentuji s Pythonem, C# a občas čaruji s Assembly kódem 🧙.
-Umím něco málo v Blenderu.. baví mě místa, kde se potkává kreativita s technikou, ať už jde o herní mechaniky, interaktivní weby nebo 3D grafiku.
+#### Zajímám se o technologie, vývoj softwaru a herní design.
 
-Rhythm game hráč, Občasný modder, Systémový nerd.. registry, gpedit a podobné programy se zastaralým GUI jsou pro mě denním chlebem🍞.
+##### Tvořím webové projekty v HTML/CSS/JS, experimentuji s Pythonem, C# a občas čaruji s Assembly kódem 🧙. Umím něco málo v Blenderu.
 
-## Nástroje co používám
+##### Baví mě místa, kde se potkává kreativita s technikou, ať už jde o herní mechaniky, interaktivní weby nebo 3D grafiku.
 
-![Python](https://img.shields.io/badge/Python-%233776AB?style=for-the-badge&logo=python&logoColor=white)
-![HTML](https://img.shields.io/badge/HTML-%23E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS](https://img.shields.io/badge/CSS-%23663399?style=for-the-badge&logo=css&logoColor=white)
-![C#](https://img.shields.io/badge/C%23-%23270065?style=for-the-badge&logo=c&logoColor=white)
-![UMT](https://img.shields.io/badge/UMT-%23E71D29?style=for-the-badge&logo=undertale&logoColor=white)
+##### Jsem rhythm game hráč 🎵, občasný modder 🛠️ a systémový nerd — registry, gpedit a podobné programy se zastaralým GUI jsou pro mě denním chlebem 🍞.
 
-## Čím se zabývám
+## Current focus
 
-- **Web** - interaktivní stránky a projekty v HTML/CSS/JS
-- **Programování** - Python, C#, základy OOP a herní logiky
-- **3D grafika** - modelování a materiály v Blenderu
-- **Herní design** - mechaniky, level design
-- **Systémy** - správa OS, úprava registrů...
+- 🌐 Interaktivní stránky a projekty v HTML/CSS/JS
+- 🐍 Programování v Pythonu a C#, základy OOP a herní logiky
+- 🧊 3D grafika — modelování a materiály v Blenderu
+- 🎮 Herní design — mechaniky, level design
+- ⚙️ Správa OS a úprava registrů
 
+### Tech Stack
+
+<img src="https://skillicons.dev/icons?i=python,html,css,js,cs,blender" />
+
+![UMT](https://img.shields.io/badge/UMT-E71D29?style=for-the-badge&logo=undertale&logoColor=white)
+
+### Contact
+
+<a href="https://github.com/tomandesMSH"><img src="https://img.shields.io/badge/GitHub-14163C?style=for-the-badge&logo=github&logoColor=white" /></a>
+
+<div align="center">
+
+<img src="https://raw.githubusercontent.com/tomandesMSH/tomandesMSH/output/github-contribution-grid-snake-dark.svg" width="100%" />
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=E71D29&height=120&section=footer" width="100%" />
+
+</div>
