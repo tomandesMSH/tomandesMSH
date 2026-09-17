@@ -26,12 +26,15 @@
   <header id="navbar">
     <nav>
       <a href="#hero" class="nav-logo">tomandesMSH<span class="cursor">_</span></a>
-      <div class="nav-links">
+      <div class="nav-links" id="navLinks">
         <a href="#about">O mně</a>
         <a href="#projects">Projekty</a>
         <a href="#gallery">Galerie</a>
         <a href="#contact">Kontakty</a>
       </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Otevřít menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
     </nav>
   </header>
 
@@ -49,7 +52,7 @@
       </a>
     </section>
 
-    <section class="content-section" id="about">
+    <section class="content-section reveal" id="about">
       <h1 class="page-title">O mně</h1>
       <p class="about-text">
         Jsem středoškolský student se zájmem o programování, hardware a správu operačních systémů.
@@ -59,7 +62,7 @@
       </p>
     </section>
 
-    <section class="content-section" id="projects">
+    <section class="content-section reveal" id="projects">
       <h1 class="page-title">Projekty</h1>
 
       <h2 class="section-title">Windows Software</h2>
@@ -100,7 +103,7 @@
       </ul>
     </section>
 
-    <section class="content-section" id="gallery">
+    <section class="content-section reveal" id="gallery">
 <pre>
 
 
@@ -213,12 +216,14 @@
 
   </main>
 
-  <footer id="contact">
+  <footer id="contact" class="reveal">
     <div class="footer-inner">
       <p class="footer-eyebrow">Kontakty:</p>
       <div class="social-links">
         <a href="https://github.com/tomandesMSH" target="_blank" rel="noopener" class="social-link">GitHub</a>
         <a href="mailto:tomandes@tuta.io" class="social-link">Email</a>
+        <a href="https://instagram.com/thom.vaa" class="social-link">Instagram</a>
+
 
       </div>
     </div>
@@ -227,6 +232,22 @@
   <!-- ░░ LIGHTBOX ░░ -->
   <div id="lightbox" class="lightbox">
     <img id="lightbox-img" src="" alt="">
+  </div>
+
+  <!-- ░░ P3R-STYLE SOCIAL LINK POPUP ░░ -->
+  <div id="p3Toast" class="p3-toast" role="dialog" aria-label="Odkaz na další portfolio">
+    <div class="p3-toast-panel">
+      <div class="p3-toast-stripe"></div>
+      <button class="p3-toast-close" id="p3ToastClose" aria-label="Zavřít">×</button>
+      <div class="p3-toast-body">
+        <p class="p3-toast-eyebrow">vítej v mojí sametové místnosti</p>
+        <p class="p3-toast-title">P3R Portfolio</p>
+        <p class="p3-toast-sub">Mrkni na moje druhé portfolio v Persona 3 Reload stylu | Zatím slouží výhradně jako showcase.</p>
+        <a href="https://tomandesmsh.github.io/P3Rp/" target="_blank" rel="noopener" class="p3-toast-link" id="p3ToastLink">
+          Otevřít <span aria-hidden="true">→</span>
+        </a>
+      </div>
+    </div>
   </div>
 
   <script>
@@ -255,6 +276,67 @@
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') lightbox.classList.remove('open');
     });
+
+    // ─── Mobile nav toggle ───────────────────────────────────────────
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    navToggle.addEventListener('click', () => {
+      const open = navbar.classList.toggle('nav-open');
+      navToggle.setAttribute('aria-expanded', open);
+    });
+    navLinks.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        navbar.classList.remove('nav-open');
+        navToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // ─── Scroll-reveal sections ──────────────────────────────────────
+    const revealEls = document.querySelectorAll('.reveal');
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+    revealEls.forEach(el => revealObserver.observe(el));
+
+    // ─── Active nav-link highlighting ────────────────────────────────
+    const sections = ['about', 'projects', 'gallery', 'contact']
+      .map(id => document.getElementById(id))
+      .filter(Boolean);
+    const navAnchors = navLinks.querySelectorAll('a');
+    const spyObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        const link = navLinks.querySelector(`a[href="#${entry.target.id}"]`);
+        if (!link) return;
+        if (entry.isIntersecting) {
+          navAnchors.forEach(a => a.classList.remove('active'));
+          link.classList.add('active');
+        }
+      });
+    }, { threshold: 0.3, rootMargin: '-30% 0px -50% 0px' });
+    sections.forEach(sec => spyObserver.observe(sec));
+
+    // ─── P3 Reload-style popup (once per session) ────────────────────
+    const p3Toast = document.getElementById('p3Toast');
+    const p3ToastClose = document.getElementById('p3ToastClose');
+    const p3ToastLink = document.getElementById('p3ToastLink');
+    const dismissP3Toast = () => {
+      p3Toast.classList.remove('open');
+      try { sessionStorage.setItem('p3ToastShown', '1'); } catch (e) {}
+    };
+    try {
+      if (!sessionStorage.getItem('p3ToastShown')) {
+        setTimeout(() => p3Toast.classList.add('open'), 1800);
+      }
+    } catch (e) {
+      setTimeout(() => p3Toast.classList.add('open'), 1800);
+    }
+    p3ToastClose.addEventListener('click', dismissP3Toast);
+    p3ToastLink.addEventListener('click', dismissP3Toast);
   </script>
 
 </body>
