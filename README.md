@@ -9,7 +9,7 @@
 
 <br/><br/>
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=28&duration=3000&pause=1200&color=E71D29&center=true&vCenter=true&width=750&lines=Software+%26+Game+Design+Enthusiast;Tvorim+weby+v+HTML%2FCSS%2FJS;Experimentuji+s+Pythonem+a+C%23;Obcas+carujii+s+Assembly+kodem+%F0%9F%A7%99;Rhythm+game+hrac+%F0%9F%8E%B5" alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=28&duration=3000&pause=1200&color=E71D29&center=true&vCenter=true&width=750&lines=Software+%26+Game+Design+Enthusiast;Web+designer%2FCSS%2FJS;Experimenting+with+Python+and+C%23;Windows+manager;Rhythm+game+player" alt="Typing SVG" />
 
 <br/>
 
