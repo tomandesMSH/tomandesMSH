@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="cs">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tom — Dark World hero</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+*{box-sizing:border-box}body{margin:0;background:#0d1117;color:#f0f0f0;font:16px system-ui;padding:48px 20px}main{max-width:1000px;margin:auto}.label{color:#aaa1bb;font:13px monospace;margin-bottom:16px}.hero{position:relative;isolation:isolate;overflow:hidden;background:#000 url('dark-world.png') center/cover;min-height:340px;padding:36px;border:1px solid #302641;font-family:'VT323',monospace}.hero:before{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,#0006,transparent)}.chapter{color:#b69bff;font-size:19px;letter-spacing:4px}h1{font:normal clamp(48px,9vw,80px)/1 'VT323',monospace;margin:18px 0 24px;letter-spacing:5px}.dialog{background:#000;border:3px solid white;padding:14px 20px;max-width:570px;display:flex;gap:20px;align-items:center;font-size:clamp(20px,3vw,27px);min-height:88px}.heart{color:#ff263e;font-size:32px;animation:pulse 1.5s steps(2,end) infinite}.dialog p{margin:0;line-height:1.2}.line{display:block}.star{position:absolute;color:#fff;right:22%;top:18%;font-size:24px;animation:spark 3s steps(3) infinite;pointer-events:none}.star.two{right:9%;top:62%;animation-delay:-1.5s;font-size:14px}.note{color:#aaa1bb;line-height:1.6;font-size:14px}details{margin-top:26px}summary{cursor:pointer}pre{padding:20px;background:#161b22;border:1px solid #30363d;border-radius:6px;overflow:auto;color:#d1b8ff}button{margin-top:18px;border:1px solid #665781;color:#eee;background:#171021;padding:10px 16px;cursor:pointer}button:hover{background:#2b1c40}button:focus-visible{outline:2px solid white;outline-offset:3px}.paused *{animation-play-state:paused!important}@keyframes pulse{50%{opacity:.6;transform:scale(.9)}}@keyframes spark{50%{opacity:.2;transform:translateY(-6px)}}@media(max-width:560px){body{padding:24px 12px}.hero{padding:24px 18px;min-height:330px;background-position:65% center}.dialog{gap:12px;padding:12px}.chapter{font-size:16px;letter-spacing:2px}}@media(prefers-reduced-motion:reduce){*{animation:none!important}}
+</style>
+<main>
+<div class="label">tomandes / README.md — HERO CONCEPT 02</div>
+<section class="hero" aria-label="Tom, Dark World profilový banner">
+<div class="chapter">A NEW CHAPTER BEGINS</div>
+<h1>HEY, I'M TOM.</h1>
+<div class="dialog"><span class="heart" aria-hidden="true">♥</span><p aria-label="Hey, welcome to my world. Creating things, one SAVE at a time."><span class="line">* Hey, welcome to my world.</span><span class="line" id="typing">* Creating things, one SAVE at a time.</span></p></div>
+<span class="star" aria-hidden="true">✦</span><span class="star two" aria-hidden="true">✦</span>
+</section>
+<button id="motion" type="button" aria-pressed="false">Pozastavit animaci</button>
+<p class="note">HTML náhled. Pro animovaný GitHub README se scéna vyexportuje do GIFu; samotné CSS a JavaScript se do README nevkládají.</p>
+<details open><summary>README kód — zatím statické pozadí</summary><pre><code>&lt;p align="center"&gt;
+  &lt;img src="assets/dark-world.png"
+       alt="Dark World — fialová temná fontána"
+       width="100%" /&gt;
+&lt;/p&gt;
+
+# Hey, I'm Tom.
+* Creating things, one SAVE at a time.</code></pre></details>
+</main>
+<script>
+const line=document.getElementById('typing'),button=document.getElementById('motion');
+const sentence='* Creating things, one SAVE at a time.';
+const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
+let paused=reduced,step=0;
+function sync(){document.querySelector('.hero').classList.toggle('paused',paused);button.textContent=paused?'Spustit animaci':'Pozastavit animaci';button.setAttribute('aria-pressed',String(paused));}
+sync();button.onclick=()=>{paused=!paused;sync()};
+setInterval(()=>{if(paused)return;step=(step+1)%(sentence.length+65);line.textContent=sentence.slice(0,Math.min(step,sentence.length))||'\u00a0'},80);
+</script>
+</html>

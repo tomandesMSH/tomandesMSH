@@ -1,0 +1,15 @@
+Created with the built-in image-generation tool.
+Source: codex-clipboard-d187f7e8-e92a-46ad-8fbd-1c77ae52cfc1.jpg
+Output: velvet-room-raised-hand.png
+
+Use case: precise-object-edit.
+Asset type: clean website background plate, 1920x1080 landscape, 16:9.
+Input image 1 is the EDIT TARGET, not an inspirational reference.
+
+Remove every game UI overlay from this exact screenshot and reconstruct the underlying scene. Preserve the original composition, framing, blue Velvet Room, angular black panels, blue wisps, floor, and Elizabeth at lower left. Elizabeth is facing the viewer with her right-side gloved hand raised palm-up and a book held against her chest. Preserve THAT exact pose, face, yellow eyes, silver bob, hat, outfit, anatomy, book, scale and placement.
+
+REMOVE COMPLETELY: both upper-left name/level and wallet panels; all sorting controls and labels including By Arcana, By Level, By Alphabet, All Personas, Registered Only, Q/E/Tab symbols; the Compendium Summon title; Select a Persona text and white underline; the complete central/right list including all row fills/borders/text/numbers/hearts and the shining blue diamond selection icon; scrollbar; bottom-left keyboard legend; Completed 71% at bottom right. Leave no interface or text anywhere.
+
+Inpaint the former interface areas with a continuous underlying scene: predominantly black angular panel surfaces with soft electric blue wisps across the center and former list area, blue room architecture behind the upper-right title, and blue floor at bottom right. The broad diagonal black scene panels and their outer geometric edges must remain.
+
+Change only the UI-covered pixels and immediately necessary blending areas. Preserve the rest of the image closely. Reconstruct small character areas hidden by the Select a Persona underline, scrollbar overlapping the raised hand, and bottom key legend. Keep the raised hand and book pose unchanged. Do not change facial expression, recompose, zoom, add objects or characters. No lettering, labels, numbers, logos, UI symbols or watermark. Output one clean background at 1920x1080 or exact 16:9.

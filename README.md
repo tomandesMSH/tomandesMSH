@@ -2,6 +2,8 @@
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=E71D29&height=180&section=header&text=Tomáš%20Vaněk&fontSize=65&fontColor=ffffff&animation=fadeIn&fontAlignY=40" width="100%" />
 
+<img src="assets/persona-3-navbar.svg" width="100%" alt="DARK HOUR: READY — Persona 3 Reload status bar" />
+
 <br/>
 
 

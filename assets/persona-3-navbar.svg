@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="260" viewBox="0 0 1200 260" role="img" aria-labelledby="title desc">
+<title id="title">Dark Hour — Ready to Reload</title>
+<desc id="desc">An animated electric-blue menu banner inspired by Persona 3 Reload: oversized slanted lettering, diagonal panels, an orbiting moon and a moving audio waveform.</desc>
+<defs>
+  <clipPath id="frame"><path d="M0 0h1200v260H0z"/></clipPath>
+  <pattern id="dots" width="9" height="9" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="#78eaff" opacity=".24"/></pattern>
+  <linearGradient id="blue" x2="1" y2="1"><stop stop-color="#0054ee"/><stop offset="1" stop-color="#009bff"/></linearGradient>
+  <mask id="moon"><circle cx="1025" cy="103" r="58" fill="white"/><circle cx="1047" cy="83" r="53" fill="black"/></mask>
+</defs>
+<style>
+  text{font-family:Arial,Helvetica,sans-serif}
+  .orbit{transform-origin:1025px 103px;animation:orbit 28s linear infinite}
+  .float{animation:float 5s ease-in-out infinite}
+  .live{animation:live 2.4s ease-in-out infinite}
+  .scan{animation:scan 7s ease-in-out infinite}
+  .beat{transform-box:fill-box;transform-origin:center bottom;animation:beat 1.1s ease-in-out infinite alternate}
+  .b2{animation-delay:-.4s}.b3{animation-delay:-.8s}.b4{animation-delay:-.2s}
+  @keyframes orbit{to{transform:rotate(360deg)}}
+  @keyframes float{50%{transform:translateY(-5px)}}
+  @keyframes live{50%{opacity:.35}}
+  @keyframes scan{0%{transform:translateX(-260px);opacity:0}15%,75%{opacity:.6}100%{transform:translateX(1200px);opacity:0}}
+  @keyframes beat{to{transform:scaleY(.25)}}
+  @media(prefers-reduced-motion:reduce){.orbit,.float,.live,.scan,.beat{animation:none}}
+</style>
+<g clip-path="url(#frame)">
+  <path fill="#020e2b" d="M0 0h1200v260H0z"/>
+  <path fill="url(#blue)" d="M0 0h885L699 260H0z"/>
+  <path fill="#13caff" d="M0 0h1200v5H0zM865 0h24L703 260h-24z"/>
+  <path fill="#003db7" d="m0 170 758-170h86L0 208z"/>
+  <path fill="url(#dots)" d="M0 0h340L145 260H0zM897 0h303v260H711z"/>
+  <path fill="none" stroke="#1474c1" stroke-width="1" d="m909 0-185 260m205-260L744 260m205-260L764 260"/>
+  <text x="-16" y="242" fill="none" stroke="#61cfff" stroke-opacity=".22" stroke-width="1.5" font-size="151" font-weight="900" font-style="italic" letter-spacing="-9">RELOAD</text>
+  <path class="scan" fill="#c3faff" opacity=".25" d="m70 0 13 0-185 260h-13z"/>
+
+  <path fill="#031333" d="M30 20h235l-14 25H16z"/>
+  <text x="38" y="37" fill="#a6f4ff" font-size="12" font-weight="700" letter-spacing="3">S.E.E.S. / ONLINE</text>
+  <circle class="live" cx="240" cy="32" r="3" fill="#6bffff"/>
+  <text x="302" y="36" fill="#d7faff" font-size="10" font-weight="700" letter-spacing="2.5">THE OTHER SIDE OF MIDNIGHT</text>
+
+  <g transform="translate(34 0) skewX(-10)">
+    <text x="20" y="128" fill="#00256f" font-size="83" font-weight="900" letter-spacing="-5">DARK HOUR</text>
+    <text x="16" y="123" fill="#fff" font-size="83" font-weight="900" letter-spacing="-5">DARK HOUR</text>
+  </g>
+  <path fill="#c1faff" d="m36 143 584-14-5 5-584 14z"/>
+  <path fill="#031333" d="m43 158 478-12-22 39-478 12z"/>
+  <text transform="translate(55 182) rotate(-1.5)" fill="#fff" font-size="25" font-weight="900" font-style="italic" letter-spacing="2">READY TO RELOAD</text>
+  <path class="live" fill="#80f6ff" d="m451 157 13 9-19 13 5-10z m21 0 13 9-19 13 5-10z"/>
+
+  <g class="float">
+    <circle cx="1025" cy="103" r="75" fill="#051d48" stroke="#1970a7"/>
+    <circle cx="1025" cy="103" r="58" fill="#d1fcff" mask="url(#moon)"/>
+    <circle cx="1025" cy="103" r="66" fill="none" stroke="#52dfff" stroke-width=".6" stroke-dasharray="2 7"/>
+    <g class="orbit" fill="none" stroke="#65efff">
+      <circle cx="1025" cy="103" r="85" stroke-dasharray="105 30 8 100 65 226" stroke-width="2"/>
+      <path d="M1025 13v12m0 156v12m-90-90h12m156 0h12"/>
+      <circle cx="1110" cy="103" r="4" fill="#fff" stroke="none"/>
+    </g>
+  </g>
+  <text x="867" y="39" fill="#76dfff" font-size="10" letter-spacing="2" transform="rotate(-55 867 39)">EXTRA HOUR</text>
+  <path stroke="#9feeff" fill="none" d="M1105 144h43l20-20m-28 20v28h35"/>
+  <text x="1152" y="188" text-anchor="end" fill="#a7f2ff" font-size="10" letter-spacing="2">MOON PHASE / 01</text>
+
+  <path fill="#020b20" d="M0 219 1200 199v61H0z"/>
+  <path fill="#abf5ff" d="M0 219 1200 199v2L0 221z"/>
+  <path fill="#bdffff" d="M0 221h255l-24 39H0z"/>
+  <text x="29" y="246" fill="#04265c" font-size="16" font-style="italic" font-weight="900" letter-spacing="1">01 / DARK HOUR</text>
+  <text x="286" y="245" fill="#7ea5cb" font-size="12" font-weight="700" letter-spacing="2">02 / FULL MOON</text>
+  <text x="514" y="245" fill="#7ea5cb" font-size="12" font-weight="700" letter-spacing="2">03 / NEXT DAY</text>
+  <g fill="#53e8ff">
+    <path class="beat" d="M855 232h3v12h-3z"/><path class="beat b2" d="M863 224h3v20h-3z"/>
+    <path class="beat b3" d="M871 230h3v14h-3z"/><path class="beat b4" d="M879 219h3v25h-3z"/>
+    <path class="beat b2" d="M887 226h3v18h-3z"/><path class="beat" d="M895 234h3v10h-3z"/>
+  </g>
+  <text x="920" y="241" fill="#dcfcff" font-size="11" font-weight="700" letter-spacing="2">AWAKEN YOUR PERSONA</text>
+  <path fill="#19cfff" d="m1180 217 9 0-15 28h-9z"/>
+</g>
+</svg>

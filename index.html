@@ -24,7 +24,7 @@
 <body>
 
   <header id="navbar">
-    <nav>
+    <nav aria-label="Hlavní navigace">
       <a href="#hero" class="nav-logo">tomandesMSH<span class="cursor">_</span></a>
       <div class="nav-links">
         <a href="#about">O mně</a>
@@ -87,6 +87,12 @@
         </ul>
       <ul class="project-list">
         <li><a href="https://tomandesmsh.github.io/SonicDecomp/">Sonic Decompilation</a> - Návod, jak legálně vytvářet dekompilace her Sonic (RDSK, HTML, CSS).</li>
+      </ul>
+      <ul class="project-list">
+        <li><a href="https://tomandesmsh.github.io/compendium-p3r/">Persona 3 Reload - Compendium</a> - Kompletní Compendium ze hry Persona 3 Reload. (HTML, JS)</li>
+          <ul>
+        <li><a href="https://github.com/tomandesMSH/compendium-p3r">GitHub</a></li>
+          </ul>
       </ul>
       </ul>
       <h2 class="section-title">Ostatní</h2>
@@ -231,9 +237,27 @@
 
   <script>
     const navbar = document.getElementById('navbar');
-    window.addEventListener('scroll', () => {
+    const navLinks = [...navbar.querySelectorAll('.nav-links a')];
+    const navSections = navLinks.map(link => document.querySelector(link.hash));
+    function updateNavigation() {
       navbar.classList.toggle('scrolled', window.scrollY > 20);
-    }, { passive: true });
+      const marker = navbar.getBoundingClientRect().bottom + 80;
+      let activeIndex = -1;
+      navSections.forEach((section, index) => {
+        if (section.getBoundingClientRect().top <= marker) activeIndex = index;
+      });
+      if (window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 4) {
+        activeIndex = navLinks.length - 1;
+      }
+      navLinks.forEach((link, index) => {
+        if (index === activeIndex) link.setAttribute('aria-current', 'location');
+        else link.removeAttribute('aria-current');
+      });
+    }
+    window.addEventListener('scroll', updateNavigation, { passive: true });
+    window.addEventListener('resize', updateNavigation);
+    window.addEventListener('load', updateNavigation);
+    updateNavigation();
 
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
