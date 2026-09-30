@@ -2,13 +2,6 @@
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=E71D29&height=180&section=header&text=Tomáš%20Vaněk&fontSize=65&fontColor=ffffff&animation=fadeIn&fontAlignY=40" width="100%" />
 
-<img src="assets/persona-3-navbar.svg" width="100%" alt="DARK HOUR: READY — Persona 3 Reload status bar" />
-
-<br/>
-
-
-<br/><br/>
-
 <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=28&duration=3000&pause=1200&color=E71D29&center=true&vCenter=true&width=750&lines=Software+%26+Game+Design+Enthusiast;Web+designer%2FCSS%2FJS;Experimenting+with+Python+and+C%23;Windows+manager;Rhythm+game+player" alt="Typing SVG" />
 
 <br/>
