@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="theme-color" content="#ECE8DF">
+  <title>tomandesMSH</title>
+
+  <meta name="description" content="Portfolio tomandesMSH, obsahující projekty, Inkscape tvorbu, PowerPoint prezentace, certifikáty atd..">
+  <meta name="author" content="Tomáš Vaněk">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="tomandesMSH - Portfolio">
+  <meta property="og:description" content="Portfolio tomandesMSH, obsahující projekty, tvorbu, certifikáty atd... Mrkněte na projekty a galerii.">
+  <meta property="og:image" content="https://github.com/tomandesMSH/tomandesMSH/blob/main/og-image.png?raw=true">
+  <meta property="og:url" content="https://tomandesmsh.github.io/tomandesMSH/">
+
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800;900&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+
+  <a class="skip" href="#projects">Přeskočit na projekty</a>
+
+  <header class="topbar">
+    <nav aria-label="Hlavní navigace">
+      <a href="#hero" class="topbar-logo">tomandesMSH</a>
+      <ul class="topbar-links">
+        <li><a href="#about">O mně</a></li>
+        <li><a href="#projects">Projekty</a></li>
+        <li><a href="#gallery">Galerie</a></li>
+        <li><a href="#contact">Kontakty</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ░░ HERO ░░ -->
+    <section class="hero" id="hero" aria-labelledby="hero-name">
+      <div class="hero-main">
+        <p class="hero-kicker">Tomáš Vaněk / Windows, web, mody</p>
+        <h1 id="hero-name" class="hero-name" aria-label="tomandesMSH">
+          <span class="hero-line" aria-hidden="true"><span>toman</span></span>
+          <span class="hero-line hero-line-shift" aria-hidden="true"><span>des<em>MSH</em></span></span>
+        </h1>
+        <p class="tagline">Opravuji to, co by nemělo být rozbité,<br>dělám to, co už dávno mělo být vytvořeno.</p>
+      </div>
+
+      <aside class="changelog" aria-labelledby="changelog-title">
+        <h2 id="changelog-title" class="changelog-title">Naposledy na GitHubu</h2>
+        <ol class="changelog-list">
+          <li><time datetime="2026-10-08">08.10.</time> <a href="#p-pocasi">Počasí a ovzduší</a></li>
+          <li><time datetime="2026-10-07">07.10.</time> <a href="#p-upgrader">Item Upgrader</a></li>
+          <li><time datetime="2026-10-03">03.10.</time> <a href="#p-soundpad">Soundpad Translator</a></li>
+          <li><time datetime="2026-10-01">01.10.</time> <a href="#p-vytahnito">VytáhniTo</a></li>
+          <li><time datetime="2026-09-27">27.09.</time> <a href="#p-compendium">P3R Compendium</a></li>
+        </ol>
+        <a class="changelog-more" href="https://github.com/tomandesMSH?tab=repositories">Všechny repozitáře</a>
+      </aside>
+    </section>
+
+    <!-- ░░ O MNĚ ░░ -->
+    <section class="about" id="about" aria-labelledby="about-title">
+      <h2 id="about-title" class="section-head">O mně</h2>
+      <div class="about-body">
+        <p class="about-lead">Jsem středoškolský student. Zajímá mě programování, hardware a správa operačních systémů.</p>
+        <p>
+          Baví mě řešit problémy, bez ohledu na to, jak moc podstatné jsou. Ať už jde o zahleněný Windows,
+          nebo o mod do hry, která je už dávno zapomenutá.
+          Pracuji v Inkscape, Photoshopu, Paint.NET a Blenderu. Stavím a spravuji počítače.
+          Zkouším nové jazyky a technologie a portfolio postupně roste.
+        </p>
+        <ul class="about-tools" aria-label="Nástroje a jazyky">
+          <li>C#</li><li>Python</li><li>HTML / CSS / JS</li><li>TypeScript</li><li>Lua</li><li>Batch</li><li>Blender</li><li>Inkscape</li>
+        </ul>
+      </div>
+      <figure class="placeholder about-photo">
+        <figcaption>
+          <strong>Místo pro fotku</strong>
+          Sem patří tvoje fotka u stolu, ideálně s otevřenou skříní PC nebo rozdělanou stavbou.
+          Formát na výšku, cca 4:5.
+        </figcaption>
+      </figure>
+    </section>
+
+    <!-- ░░ PROJEKTY ░░ -->
+    <section class="projects" id="projects" aria-labelledby="projects-title">
+      <h2 id="projects-title" class="section-head">Projekty</h2>
+
+      <div class="cat">
+        <h3 class="cat-title">Windows Software <span class="cat-count" aria-hidden="true">04</span></h3>
+        <ul class="project-list">
+          <li class="project">
+            <a class="project-name" href="https://github.com/tomandesMSH/KASPAR">KASPAR</a>
+            <p class="project-desc">Windows "debloater", sada nástrojů pro úpravu systému. Skryté nastavení, registry a vracení změn zpět.</p>
+            <span class="project-tech">C# / WinUI 3</span>
+            <ul class="project-links">
+              <li><a href="https://tomandesmsh.github.io/KASPARDocs/">Dokumentace</a></li>
+              <li><a href="https://github.com/tomandesMSH/KASPAR/releases">Instalátor</a></li>
+            </ul>
+            <ul class="project-sub">
+              <li>
+                <a href="https://github.com/tomandesMSH/Windows-LocalAccount">KasparNRO</a>
+                - Instalace Windows bez internetu, s lokálním účtem. Samostatný skript z KASPARu. (Batch)
+              </li>
+            </ul>
+          </li>
+          <li class="project">
+            <a class="project-name" href="https://github.com/tomandesMSH/Custom-AutoPlay">Custom-AutoPlay</a>
+            <p class="project-desc">Nástroj pro automatickou úpravu registrů Windows AutoPlay.</p>
+            <span class="project-tech">Python</span>
+            <ul class="project-links">
+              <li><a href="https://tomandesmsh.github.io/Custom-AutoPlay-Docs/">Dokumentace</a></li>
+            </ul>
+          </li>
+          <li class="project" id="p-soundpad">
+            <a class="project-name" href="https://github.com/tomandesMSH/SoundpadTranslator">Soundpad Translator</a>
+            <p class="project-desc">Druhá klávesnice jako soundboard pro Soundpad. Její klávesy se nedostanou do Windows, místo toho přehrají zvuk.</p>
+            <span class="project-tech">C#</span>
+          </li>
+          <li class="project">
+            <a class="project-name" href="https://github.com/tomandesMSH/Cliptard">Cliptard</a>
+            <p class="project-desc">Náhrada historie schránky z Windows 11, pro chvíle, kdy ji update zase rozbije. Otevírá se přes Alt+V+C.</p>
+            <span class="project-tech">Python</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="cat">
+        <h3 class="cat-title">Webové projekty <span class="cat-count" aria-hidden="true">05</span></h3>
+        <ul class="project-list">
+          <li class="project">
+            <a class="project-name" href="https://keyboardheromuzio.vercel.app/">Keyboard Hero</a>
+            <p class="project-desc">Webová aplikace pro ZUŠ Moravský Krumlov s cílem motivovat děti k pravidelnému domácímu cvičení na hudební nástroj hravou formou.</p>
+            <span class="project-tech">TypeScript</span>
+            <ul class="project-links">
+              <li><a href="https://tomandesmsh.github.io/Keyboard-Hero-Docs/">Dokumentace</a></li>
+              <li><a href="https://github.com/tomandesMSH/Keyboard-Hero">GitHub</a></li>
+            </ul>
+          </li>
+          <li class="project" id="p-compendium">
+            <a class="project-name" href="https://tomandesmsh.github.io/compendium-p3r/">Persona 3 Reload - Compendium</a>
+            <p class="project-desc">Kompletní Compendium ze hry Persona 3 Reload v prohlížeči.</p>
+            <span class="project-tech">HTML / JS</span>
+            <ul class="project-links">
+              <li><a href="https://github.com/tomandesMSH/compendium-p3r">GitHub</a></li>
+            </ul>
+          </li>
+          <li class="project" id="p-pocasi">
+            <a class="project-name" href="https://tomandesmsh.github.io/weather_api_design/">Počasí a kvalita ovzduší</a>
+            <p class="project-desc">Zadáš město, dostaneš aktuální počasí, index ovzduší (PM2.5, PM10, O3) a předpověď na další dny. Data z WeatherAPI, klíč se vkládá až při nasazení přes GitHub Actions.</p>
+            <span class="project-tech">HTML / CSS / JS</span>
+            <ul class="project-links">
+              <li><a href="https://github.com/tomandesMSH/weather_api_design">GitHub</a></li>
+            </ul>
+          </li>
+          <li class="project">
+            <a class="project-name" href="https://tomandesmsh.github.io/P3Rp/">P3R Portfolio</a>
+            <p class="project-desc">Druhé portfolio ve stylu Persona 3 Reload. Zatím slouží jako showcase.</p>
+            <span class="project-tech">HTML / CSS / JS</span>
+            <ul class="project-links">
+              <li><a href="https://github.com/tomandesMSH/P3Rp">GitHub</a></li>
+            </ul>
+          </li>
+          <li class="project">
+            <a class="project-name" href="https://tomandesmsh.github.io/SonicDecomp/">Sonic Decompilation</a>
+            <p class="project-desc">Návod, jak legálně vytvářet dekompilace her Sonic.</p>
+            <span class="project-tech">RSDK / HTML / CSS</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="cat">
+        <h3 class="cat-title">Hry a mody <span class="cat-count" aria-hidden="true">03</span></h3>
+        <ul class="project-list">
+          <li class="project" id="p-upgrader">
+            <a class="project-name" href="https://github.com/tomandesMSH/tboi-upgrader">Item Upgrader</a>
+            <p class="project-desc">Mod pro The Binding of Isaac: Repentance+ (REPENTOGON). Aktivní item otevře nabídku, kde vsadíš svůj item a v ruletě ho vylepšíš nebo zduplikuješ.</p>
+            <span class="project-tech">Lua · v0.1</span>
+          </li>
+          <li class="project">
+            <a class="project-name" href="https://github.com/tomandesMSH/Just-Shapes-and-Beats-save-editor">JSaB Save Editor</a>
+            <p class="project-desc">Dekodér, enkodér a editor savů pro hru Just Shapes and Beats.</p>
+            <span class="project-tech">Python</span>
+          </li>
+          <li class="project">
+            <a class="project-name" href="https://github.com/tomandesMSH/WASD-to-arrows">WASD-to-arrows</a>
+            <p class="project-desc">Ovládání WASD ve hrách, které podporují jen šipky.</p>
+            <span class="project-tech">Python</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="cat">
+        <h3 class="cat-title">Ostatní <span class="cat-count" aria-hidden="true">02</span></h3>
+        <ul class="project-list">
+          <li class="project" id="p-vytahnito">
+            <a class="project-name" href="https://github.com/tomandesMSH/VytahniTo">VytáhniTo</a>
+            <p class="project-desc">Rozšíření pro Chrome. Stáhne všechny obrázky ze stránky, i ty chráněné proti pravému kliku. Umí i videa, včetně HLS streamů.</p>
+            <span class="project-tech">Chrome / JS</span>
+            <ul class="project-links">
+              <li><a href="https://tomandesmsh.github.io/VytahniTo/">Web</a></li>
+            </ul>
+          </li>
+          <li class="project">
+            <a class="project-name" href="https://github.com/tomandesMSH/QUbuntu-pub">QUbuntu</a>
+            <p class="project-desc">Rychlý přístup k Ubuntu serveru: probuzení přes Wake-on-LAN, SSH, CasaOS, Jellyfin a vypnutí.</p>
+            <span class="project-tech">Python</span>
+            <ul class="project-links">
+              <li><a href="https://tomandesmsh.github.io/QUbuntu-pub/">Web</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <div class="cat cat-wip">
+        <h3 class="cat-title">WIP <span class="cat-count" aria-hidden="true">01</span></h3>
+        <ul class="project-list">
+          <li class="project">
+            <span class="project-name">P2P messaging app</span>
+            <p class="project-desc">Peer-to-peer messenger.</p>
+            <span class="project-tech">rozpracováno</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ░░ GALERIE ░░ -->
+    <section class="gallery" id="gallery" aria-labelledby="gallery-title">
+      <h2 id="gallery-title" class="section-head">Galerie</h2>
+
+      <div class="gallery-row gallery-row-certs">
+        <h3 class="gallery-caption">Certifikáty</h3>
+        <div class="gallery-grid">
+          <figure class="gallery-item gallery-item-wide">
+            <button type="button" class="zoom"><img src="gallery/fcc.png" alt="Certifikát FreeCodeCamp a Microsoft, Foundational C#" width="919" height="617" loading="lazy"></button>
+            <figcaption>FreeCodeCamp &amp; Microsoft - C# certifikát</figcaption>
+          </figure>
+          <figure class="gallery-item placeholder">
+            <figcaption>
+              <strong>Místo pro další certifikát</strong>
+              Sken nebo screenshot dalšího certifikátu, na šířku.
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <div class="gallery-row">
+        <h3 class="gallery-caption">Projekty v Inkscape</h3>
+        <div class="gallery-grid">
+          <figure class="gallery-item gallery-item-big">
+            <button type="button" class="zoom"><img src="gallery/lowpoly.png" alt="Lowpoly kočka, vektor z trojúhelníků" width="463" height="463" loading="lazy"></button>
+            <figcaption>Lowpoly kočka</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <button type="button" class="zoom"><img src="gallery/lowpoly2.png" alt="Lowpoly ptáček" width="459" height="343" loading="lazy"></button>
+            <figcaption>Lowpoly ptáček</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <button type="button" class="zoom"><img src="gallery/vektor_pepsi.png" alt="Vektorové logo Pepsi" width="562" height="562" loading="lazy"></button>
+            <figcaption>Vektor logo Pepsi</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <button type="button" class="zoom"><img src="gallery/vektor_spotify.png" alt="Vektorové logo Spotify" width="562" height="562" loading="lazy"></button>
+            <figcaption>Vektor logo Spotify</figcaption>
+          </figure>
+          <figure class="gallery-item placeholder">
+            <figcaption>
+              <strong>Místo pro další vektor</strong>
+              Export z Inkscape jako PNG, čtverec, světlé pozadí jako u ostatních.
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <div class="gallery-row gallery-row-slides">
+        <h3 class="gallery-caption">PowerPoint prezentace</h3>
+        <div class="gallery-grid">
+          <figure class="gallery-item">
+            <a class="gallery-link" href="https://1drv.ms/p/c/a63918c99464a3e6/IQCiKZo5WYGnQ4Rug7zhQsLwAYxxiscKJKU7phMjOraJ2nM?e=vb5bHw" target="_blank" rel="noopener">
+              <img src="gallery/ram_pptx.png" alt="Titulní slide prezentace o RAM" width="562" height="562" loading="lazy">
+              <span class="gallery-link-label">OneDrive</span>
+            </a>
+            <figcaption>RAM, vysvětlení XMP/EXPO</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <a class="gallery-link" href="https://1drv.ms/p/c/a63918c99464a3e6/IQCLFAAi6cOlR4maG7xCAEmwAY0WkQRxt8jXWdoo5GlXFOE?e=uiuCNf" target="_blank" rel="noopener">
+              <img src="gallery/gpu_pptx.png" alt="Titulní slide prezentace o GPU" width="562" height="562" loading="lazy">
+              <span class="gallery-link-label">OneDrive</span>
+            </a>
+            <figcaption>GPU, vysvětlení základů</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <a class="gallery-link" href="https://1drv.ms/p/c/a63918c99464a3e6/IQCBzBGrVF7KRbYt3qQC0U9FATTZX_7_RRV5H0vXKNuFR4Y?e=J2bcev" target="_blank" rel="noopener">
+              <img src="gallery/win_pptx.png" alt="Titulní slide prezentace Windows 11 a Defender" width="562" height="562" loading="lazy">
+              <span class="gallery-link-label">OneDrive</span>
+            </a>
+            <figcaption>Windows 11 + Defender</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <a class="gallery-link" href="https://1drv.ms/p/c/a63918c99464a3e6/IQBzagTMQD7YSZr2rBlPC4JqAdPoia--Ucp5y4Dl-h44uxk?e=j2452u" target="_blank" rel="noopener">
+              <img src="gallery/win2_pptx.png" alt="Titulní slide prezentace o monetizaci Windows 11" width="562" height="562" loading="lazy">
+              <span class="gallery-link-label">OneDrive</span>
+            </a>
+            <figcaption>Monetizace Windows 11</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <div class="gallery-row">
+        <h3 class="gallery-caption">Ostatní</h3>
+        <div class="gallery-grid">
+          <figure class="gallery-item">
+            <a class="gallery-link" href="https://github.com/tomandesMSH/Yaroslav-and-Esau" target="_blank" rel="noopener">
+              <img src="gallery/yae.png" alt="Screenshot ze hry Yaroslav and Esau" width="562" height="562" loading="lazy">
+              <span class="gallery-link-label">GitHub</span>
+            </a>
+            <figcaption>Hra v Construct3</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <button type="button" class="zoom"><img src="gallery/cisco.png" alt="Topologie sítě v Cisco Packet Tracer" width="562" height="562" loading="lazy"></button>
+            <figcaption>Packet Tracer</figcaption>
+          </figure>
+          <figure class="gallery-item placeholder">
+            <figcaption>
+              <strong>Místo pro screenshot</strong>
+              Item Upgrader ve hře: otevřená ruleta nad itemem v místnosti.
+            </figcaption>
+          </figure>
+          <figure class="gallery-item placeholder">
+            <figcaption>
+              <strong>Místo pro fotku</strong>
+              Postavené nebo opravené PC, ideálně otevřená skříň zboku.
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact" class="contact" aria-labelledby="contact-title">
+    <h2 id="contact-title" class="contact-title">Kontakty</h2>
+    <ul class="contact-links">
+      <li><a href="https://github.com/tomandesMSH" target="_blank" rel="noopener"><span>GitHub</span> tomandesMSH</a></li>
+      <li><a href="mailto:tomandes@tuta.io"><span>Email</span> tomandes@tuta.io</a></li>
+      <li><a href="https://instagram.com/thom.vaa" target="_blank" rel="noopener"><span>Instagram</span> @thom.vaa</a></li>
+    </ul>
+  </footer>
+
+  <!-- ░░ LIGHTBOX ░░ -->
+  <dialog id="lightbox" class="lightbox" aria-label="Náhled obrázku">
+    <img id="lightbox-img" src="" alt="">
+    <p class="lightbox-hint">Klikni nebo stiskni Esc pro zavření</p>
+  </dialog>
+
+  <!-- ░░ P3R PORTFOLIO POPUP ░░ -->
+  <div id="p3Toast" class="p3-toast" role="dialog" aria-label="Odkaz na další portfolio">
+    <button class="p3-toast-close" id="p3ToastClose" aria-label="Zavřít">×</button>
+    <p class="p3-toast-eyebrow">vítej v mojí sametové místnosti</p>
+    <p class="p3-toast-title">P3R Portfolio</p>
+    <p class="p3-toast-sub">Mrkni na moje druhé portfolio v Persona 3 Reload stylu | Zatím slouží výhradně jako showcase.</p>
+    <a href="https://tomandesmsh.github.io/P3Rp/" target="_blank" rel="noopener" class="p3-toast-link" id="p3ToastLink">Otevřít</a>
+  </div>
+
+  <script>
+    // ─── Aktivní odkaz v navigaci ────────────────────────────────────
+    const navLinks = [...document.querySelectorAll('.topbar-links a')];
+    const navSections = navLinks.map(link => document.querySelector(link.hash));
+    function updateNavigation() {
+      const marker = 140;
+      let activeIndex = -1;
+      navSections.forEach((section, index) => {
+        if (section.getBoundingClientRect().top <= marker) activeIndex = index;
+      });
+      if (window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 4) {
+        activeIndex = navLinks.length - 1;
+      }
+      navLinks.forEach((link, index) => {
+        if (index === activeIndex) link.setAttribute('aria-current', 'location');
+        else link.removeAttribute('aria-current');
+      });
+    }
+    window.addEventListener('scroll', updateNavigation, { passive: true });
+    window.addEventListener('resize', updateNavigation);
+    updateNavigation();
+
+    // ─── Lightbox ────────────────────────────────────────────────────
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    document.querySelectorAll('.zoom').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const img = btn.querySelector('img');
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        lightbox.showModal();
+      });
+    });
+    lightbox.addEventListener('click', () => lightbox.close());
+
+    // ─── P3R popup (jednou za session) ───────────────────────────────
+    const p3Toast = document.getElementById('p3Toast');
+    const dismissP3Toast = () => {
+      p3Toast.classList.remove('open');
+      try { sessionStorage.setItem('p3ToastShown', '1'); } catch (e) {}
+    };
+    let p3Shown = false;
+    try { p3Shown = !!sessionStorage.getItem('p3ToastShown'); } catch (e) {}
+    if (!p3Shown) setTimeout(() => p3Toast.classList.add('open'), 2200);
+    document.getElementById('p3ToastClose').addEventListener('click', dismissP3Toast);
+    document.getElementById('p3ToastLink').addEventListener('click', dismissP3Toast);
+  </script>
+
+</body>
+</html>
