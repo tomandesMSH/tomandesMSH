@@ -28,7 +28,7 @@
 
 ### Tech Stack
 
-<img src="https://skillicons.dev/icons?i=python,html,css,js,cs,blender" />
+<img src="https://skillicons.dev/icons?i=python,cs,lua,html,css,js,ts,bootstrap,powershell,windows,blender,vercel&perline=13" />
 
 ![UMT](https://img.shields.io/badge/UMT-E71D29?style=for-the-badge&logo=undertale&logoColor=white)
 
