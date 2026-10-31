@@ -1,6 +1,6 @@
 <div align="center">
 
-<a href="https://github.com/tomandesMSH/neofetch-readme"><img src="https://neofetch-readme.vercel.app/api/svg?user=tomandesMSH&os=Tiny11%2C+CachyOS&school=SO%C5%A0+EDUCAnet+Brno&frontend=HTML%2C+CSS%2C+JS%2C+TS&backend=Python%2C+C%2523%2C+Lua&ai=Claude+Code%2C+Codex&database=Supabase&editor=Visual+Studio+%28Code%29&icons=javascript%2Ctypescript%2Cnodedotjs%2Cpython%2Cgit%2Clinux%2Chtml5%2Ccss3%2Cbootstrap%2Cblender%2Cvercel" width="100%" alt="tomandesMSH neofetch profile card" /></a>
+<a href="https://github.com/tomandesMSH/neofetch-readme"><img src="https://neofetch-readme.vercel.app/api/svg?user=tomandesMSH&os=Tiny11%2C+CachyOS&school=SO%C5%A0+EDUCAnet+Brno&frontend=HTML%2C+CSS%2C+JS%2C+TS&backend=Python%2C+C%23%2C+Lua&ai=Claude+Code%2C+Codex&database=Supabase&editor=Visual+Studio+%28Code%29&icons=javascript%2Ctypescript%2Cnodedotjs%2Cpython%2Cgit%2Clinux%2Chtml5%2Ccss3%2Cbootstrap%2Cblender%2Cvercel" width="100%" alt="tomandesMSH neofetch profile card" /></a>
 </div>
 
 like what you see? check out <a href="https://github.com/tomandesMSH/neofetch-readme">tomandesmsh/neofetch-readme</a>.
