@@ -24,6 +24,8 @@
 
 <div align="center">
 
+<img src="https://skillicons.dev/icons?i=python,cs,lua,html,css,js,ts,bootstrap,powershell,windows,blender,vercel&perline=13" />
+
 <img src="https://capsule-render.vercel.app/api?type=waving&color=E71D29&height=120&section=footer" width="100%" />
 
 </div>
