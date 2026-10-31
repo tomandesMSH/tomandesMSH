@@ -2,9 +2,11 @@
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=E71D29&height=180&section=header&text=Tomáš%20Vaněk&fontSize=65&fontColor=ffffff&animation=fadeIn&fontAlignY=40" width="100%" />
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=28&duration=3000&pause=1200&color=E71D29&center=true&vCenter=true&width=750&lines=Software+%26+Game+Design+Enthusiast;Web+designer%2FCSS%2FJS;Experimenting+with+Python+and+C%23;Windows+manager;Rhythm+game+player" alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=28&duration=3000&pause=1200&color=E71D29&center=true&vCenter=true&width=750&lines=Software+%26+Game+Design+Enthusiast;Rhythm+game+player" alt="Typing SVG" />
 
 <br/>
+
+<img src="https://neofetch-readme.vercel.app/api/svg?user=tomandesMSH&os=Tiny11%2C+CachyOS&school=SO%C5%A0+EDUCAnet+Brno&frontend=HTML%2C+CSS%2C+JS%2C+TS&backend=Python%2C+C%23%2C+Lua&ai=Claude+Code%2C+Codex&database=Supabase&editor=Visual+Studio+%28Code%29&icons=javascript%2Ctypescript%2Creact%2Cnodedotjs%2Cphp%2Cpython%2Cgit%2Clinux%2Chtml5%2Ccss3" width="100%" alt="tomandesMSH neofetch profile card" />
 
 </div>
 
@@ -17,18 +19,6 @@
 ##### Baví mě místa, kde se potkává kreativita s technikou, ať už jde o herní mechaniky, interaktivní weby nebo 3D grafiku.
 
 ##### Jsem rhythm game hráč, občasný modder a systémový nerd: registry, gpedit a podobné programy se zastaralým GUI jsou pro mě denním chlebem.
-
-## Current focus
-
-- Interaktivní stránky a projekty v HTML/CSS/JS
-- Programování v Pythonu a C#, základy OOP a herní logiky
-- 3D grafika, modelování a materiály v Blenderu
-- Herní design, mechaniky, level design
-- Správa OS a úprava registrů
-
-### Tech Stack
-
-<img src="https://skillicons.dev/icons?i=python,cs,lua,html,css,js,ts,bootstrap,powershell,windows,blender,vercel&perline=13" />
 
 ![UMT](https://img.shields.io/badge/UMT-E71D29?style=for-the-badge&logo=undertale&logoColor=white)
 
