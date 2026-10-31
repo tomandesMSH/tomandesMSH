@@ -4,8 +4,6 @@
 
 <br><br><br>
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=E71D29&height=180&section=header&text=Tomáš%20Vaněk&fontSize=65&fontColor=ffffff&animation=fadeIn&fontAlignY=40" width="100%" />
-
 </div>
 
 ## About Me
@@ -23,11 +21,13 @@
 ### Contact
 
 <a href="https://github.com/tomandesMSH"><img src="https://img.shields.io/badge/GitHub-14163C?style=for-the-badge&logo=github&logoColor=white" /></a>
+<a href="https://www.instagram.com/thom.vaa"><img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" /></a>
+<img src="https://img.shields.io/badge/Discord-thom.va-5865F2?style=for-the-badge&logo=discord&logoColor=white" />
+<a href="mailto:tomandes@tuta.io"><img src="https://img.shields.io/badge/Email-tomandes%40tuta.io-434343?style=for-the-badge&logo=tuta&logoColor=white" /></a>
+<a href="mailto:tomandesmsh@gmail.com"><img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" /></a>
 
 <div align="center">
 
 <img src="https://skillicons.dev/icons?i=python,cs,lua,html,css,js,ts,bootstrap,powershell,windows,blender,vercel&perline=13" />
-
-<img src="https://capsule-render.vercel.app/api?type=waving&color=E71D29&height=120&section=footer" width="100%" />
 
 </div>
