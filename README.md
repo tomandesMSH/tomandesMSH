@@ -2,8 +2,6 @@
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=E71D29&height=180&section=header&text=Tomáš%20Vaněk&fontSize=65&fontColor=ffffff&animation=fadeIn&fontAlignY=40" width="100%" />
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=28&duration=3000&pause=1200&color=E71D29&center=true&vCenter=true&width=750&lines=Software+%26+Game+Design+Enthusiast;Rhythm+game+player" alt="Typing SVG" />
-
 <br/>
 
 <img src="https://neofetch-readme.vercel.app/api/svg?user=tomandesMSH&os=Tiny11%2C+CachyOS&school=SO%C5%A0+EDUCAnet+Brno&frontend=HTML%2C+CSS%2C+JS%2C+TS&backend=Python%2C+C%23%2C+Lua&ai=Claude+Code%2C+Codex&database=Supabase&editor=Visual+Studio+%28Code%29&icons=javascript%2Ctypescript%2Creact%2Cnodedotjs%2Cphp%2Cpython%2Cgit%2Clinux%2Chtml5%2Ccss3" width="100%" alt="tomandesMSH neofetch profile card" />
