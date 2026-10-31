@@ -1,7 +1,7 @@
 <div align="center">
 
-<img src="https://neofetch-readme.vercel.app/api/svg?user=tomandesMSH&os=Tiny11%2C+CachyOS&school=SO%C5%A0+EDUCAnet+Brno&frontend=HTML%2C+CSS%2C+JS%2C+TS&backend=Python%2C+C%23%2C+Lua&ai=Claude+Code%2C+Codex&database=Supabase&editor=Visual+Studio+%28Code%29&icons=javascript%2Ctypescript%2Creact%2Cnodedotjs%2Cphp%2Cpython%2Cgit%2Clinux%2Chtml5%2Ccss3" width="100%" alt="tomandesMSH neofetch profile card" />
-
+<a href="github.com/tomandesMSH/neofetch-readme" <img src="https://neofetch-readme.vercel.app/api/svg?user=tomandesMSH&os=Tiny11%2C+CachyOS&school=SO%C5%A0+EDUCAnet+Brno&frontend=HTML%2C+CSS%2C+JS%2C+TS&backend=Python%2C+C%23%2C+Lua&ai=Claude+Code%2C+Codex&database=Supabase&editor=Visual+Studio+%28Code%29&icons=javascript%2Ctypescript%2Creact%2Cnodedotjs%2Cphp%2Cpython%2Cgit%2Clinux%2Chtml5%2Ccss3" width="100%" alt="tomandesMSH neofetch profile card" /> </a>
+like what you see? check out tomandesmsh/neofetch-readme.
 <br><br><br>
 
 </div>
@@ -15,8 +15,6 @@
 ##### Baví mě místa, kde se potkává kreativita s technikou, ať už jde o herní mechaniky, interaktivní weby nebo 3D grafiku.
 
 ##### Jsem rhythm game hráč, občasný modder a systémový nerd: registry, gpedit a podobné programy se zastaralým GUI jsou pro mě denním chlebem.
-
-![UMT](https://img.shields.io/badge/UMT-E71D29?style=for-the-badge&logo=undertale&logoColor=white)
 
 ### Contact
 
