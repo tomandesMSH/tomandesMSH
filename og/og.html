@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<title>og-image</title>
+<meta name="robots" content="noindex">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=block" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 1200px; height: 630px; overflow: hidden; background: #080b14; }
+  .card {
+    position: relative; width: 1200px; height: 630px; overflow: hidden;
+    font-family: 'Space Grotesk', sans-serif; color: #e2e8f0;
+    background:
+      radial-gradient(700px 500px at 88% 10%, rgba(37, 99, 235, .28), transparent 65%),
+      radial-gradient(500px 400px at 0% 100%, rgba(0, 102, 204, .18), transparent 70%),
+      #080b14;
+  }
+  .grid {
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(rgba(59, 130, 246, .08) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(59, 130, 246, .08) 1px, transparent 1px);
+    background-size: 50px 50px;
+    -webkit-mask-image: radial-gradient(ellipse 70% 90% at 30% 50%, black 20%, transparent 80%);
+  }
+  .left { position: absolute; z-index: 5; left: 72px; top: 0; bottom: 0; width: 560px; display: flex; flex-direction: column; justify-content: center; }
+  .eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 22px; color: #3b82f6; letter-spacing: .02em; margin-bottom: 18px; }
+  .eyebrow b { color: #64748b; font-weight: 400; }
+  h1 {
+    font-size: 80px; font-weight: 700; letter-spacing: -.035em; line-height: 1;
+    background: linear-gradient(180deg, #ffffff 30%, #9cc2ff 100%);
+    -webkit-background-clip: text; color: transparent;
+  }
+  h1 .cur { color: #3b82f6; -webkit-text-fill-color: #3b82f6; font-weight: 500; }
+  .who { margin-top: 14px; font-size: 30px; font-weight: 500; color: #cbd5e1; }
+  .tag { margin-top: 26px; font-size: 22px; line-height: 1.45; color: #94a3b8; border-left: 3px solid #2563eb; padding-left: 18px; }
+  .chips { margin-top: 34px; display: flex; gap: 10px; flex-wrap: wrap; }
+  .chips span {
+    font-family: 'JetBrains Mono', monospace; font-size: 17px; color: #bfdbfe;
+    padding: 7px 14px; border-radius: 999px;
+    background: rgba(37, 99, 235, .14); border: 1px solid rgba(59, 130, 246, .35);
+  }
+  .shot {
+    position: absolute; border-radius: 14px; overflow: hidden;
+    border: 1px solid rgba(148, 163, 184, .25);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, .55), 0 0 0 1px rgba(0,0,0,.4), 0 0 60px rgba(37, 99, 235, .18);
+    background: #0d1117;
+  }
+  .shot img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: top left; }
+  .s1 { width: 500px; height: 290px; left: 760px; top: 36px; transform: rotate(4deg); }
+  .s2 { width: 450px; height: 255px; left: 800px; top: 340px; transform: rotate(-3deg); }
+  .s3 { width: 420px; height: 275px; left: 690px; top: 185px; transform: rotate(-1deg); z-index: 2; }
+  .fade { position: absolute; inset: 0; pointer-events: none;
+    background: linear-gradient(90deg, rgba(8,11,20,.9) 52%, rgba(8,11,20,0) 64%), linear-gradient(0deg, rgba(8,11,20,.5), transparent 25%); z-index: 3; }
+  .domain { position: absolute; right: 44px; bottom: 30px; z-index: 4; font-family: 'JetBrains Mono', monospace; font-size: 20px; color: #e2e8f0;
+    padding: 8px 16px; border-radius: 10px; background: rgba(8, 11, 20, .75); border: 1px solid rgba(59,130,246,.4); }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="grid"></div>
+  <div class="shot s1"><img src="../screenshots/kaspar-1.png" alt=""></div>
+  <div class="shot s2"><img src="../screenshots/keyboard-hero-1.png" alt=""></div>
+  <div class="shot s3"><img src="../screenshots/keyboard-utils-1.png" alt=""></div>
+  <div class="fade"></div>
+  <div class="left">
+    <div class="eyebrow"><b>~/</b>portfolio</div>
+    <h1>tomandesMSH<span class="cur">_</span></h1>
+    <div class="who">Tomáš Vaněk</div>
+    <div class="tag">Opravuji to, co by nemělo být rozbité,<br>dělám to, co už dávno mělo být vytvořeno.</div>
+  </div>
+  <div class="domain">tomandes.eu</div>
+</div>
+</body>
+</html>
