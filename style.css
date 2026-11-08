@@ -88,6 +88,37 @@ body {
   border-color: rgba(59, 130, 246, 0.35);
 }
 .nav-links a:focus-visible { outline: 2px solid var(--blue-glow); outline-offset: 2px; }
+/* The links sit on the right, next to the language switch. */
+.nav-links { margin-left: auto; }
+.nav-end { display: flex; align-items: center; gap: 0.9rem; flex-shrink: 0; }
+
+/* CZ / EN: a small glassy pill switch (the same one as on /report). */
+.lang-switch {
+  display: inline-flex;
+  padding: 3px;
+  border-radius: 999px;
+  background: rgba(13, 17, 23, 0.6);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+.lang-switch button {
+  font: 600 0.78rem var(--mono);
+  letter-spacing: 0.04em;
+  color: var(--text-sub);
+  background: none;
+  border: 0;
+  border-radius: 999px;
+  padding: 0.3rem 0.7rem;
+  cursor: pointer;
+  transition: color 0.2s, background 0.2s;
+}
+.lang-switch button:hover { color: var(--text); }
+.lang-switch button:focus-visible { outline: 2px solid var(--blue-glow); outline-offset: 2px; }
+.lang-switch button[aria-pressed="true"] {
+  color: #fff;
+  background: linear-gradient(135deg, var(--blue-glow), var(--blue-accent));
+}
 section[id], footer[id] { scroll-margin-top: 80px; }
 
 .nav-toggle {

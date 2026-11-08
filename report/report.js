@@ -93,9 +93,11 @@
   const startedAt = Date.now();
   const params = new URLSearchParams(location.search);
 
-  // The language: from the link, else the reader's last pick, else the browser's (Czech and Slovak read Czech).
+  // The language: from the link, else the reader's last pick (shared with the home page), else the browser's
+  // (Czech and Slovak read Czech).
+  const LANG_KEY = 'tomandes-lang';
   function storedLang() {
-    try { return localStorage.getItem('report-lang'); } catch { return null; }
+    try { return localStorage.getItem(LANG_KEY) || localStorage.getItem('report-lang'); } catch { return null; }
   }
   let lang = [params.get('lang'), storedLang()].find((l) => l === 'cs' || l === 'en')
     || (/^(cs|sk)\b/i.test(navigator.language || '') ? 'cs' : 'en');
@@ -116,7 +118,7 @@
   document.querySelectorAll('.lang button').forEach((button) =>
     button.addEventListener('click', () => {
       lang = button.dataset.lang;
-      try { localStorage.setItem('report-lang', lang); } catch { /* the pick just isn't remembered */ }
+      try { localStorage.setItem(LANG_KEY, lang); } catch { /* the pick just isn't remembered */ }
       applyLang();
     }),
   );

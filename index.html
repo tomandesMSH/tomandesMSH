@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cs">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="theme-color" content="#080b14">
   <title>tomandesMSH</title>
 
-  <meta name="description" content="Portfolio tomandesMSH, obsahující projekty, Inkscape tvorbu, PowerPoint prezentace, certifikáty atd..">
+  <meta name="description" content="Portfolio tomandesMSH, obsahující projekty, Inkscape tvorbu, PowerPoint prezentace, certifikáty atd.." data-i18n-content="metaDescription">
   <meta name="author" content="Tomáš Vaněk">
 
   <meta property="og:type" content="website">
@@ -24,17 +24,23 @@
 <body>
 
   <header id="navbar">
-    <nav aria-label="Hlavní navigace">
+    <nav aria-label="Hlavní navigace" data-i18n-aria="navLabel">
       <a href="#hero" class="nav-logo">tomandesMSH<span class="cursor">_</span></a>
       <div class="nav-links" id="navLinks">
-        <a href="#about">O mně</a>
-        <a href="#projects">Projekty</a>
-        <a href="#gallery">Galerie</a>
-        <a href="#contact">Kontakty</a>
+        <a href="#about" data-i18n="navAbout">O mně</a>
+        <a href="#projects" data-i18n="navProjects">Projekty</a>
+        <a href="#gallery" data-i18n="navGallery">Galerie</a>
+        <a href="#contact" data-i18n="navContact">Kontakty</a>
       </div>
-      <button class="nav-toggle" id="navToggle" aria-label="Otevřít menu" aria-expanded="false" aria-controls="navLinks">
-        <span></span><span></span><span></span>
-      </button>
+      <div class="nav-end">
+        <div class="lang-switch" role="group" aria-label="Jazyk / Language">
+          <button type="button" data-lang="cs" aria-pressed="true">CZ</button>
+          <button type="button" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+        <button class="nav-toggle" id="navToggle" aria-label="Otevřít menu" data-i18n-aria="navToggle" aria-expanded="false" aria-controls="navLinks">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </nav>
   </header>
 
@@ -45,16 +51,16 @@
       <div class="hero-grid"></div>
       <div class="hero-content">
         <h1 id="hero-name">tomandesMSH</h1>
-        <p class="tagline"><i>Opravuji to, co by nemělo být rozbité,<br>dělám to, co už dávno mělo být vytvořeno..</i></p>
+        <p class="tagline"><i data-i18n-html="tagline">Opravuji to, co by nemělo být rozbité,<br>dělám to, co už dávno mělo být vytvořeno..</i></p>
       </div>
-      <a href="#projects" class="scroll-indicator" aria-label="Scroll down">
+      <a href="#projects" class="scroll-indicator" aria-label="Posunout dolů" data-i18n-aria="scrollDown">
         <span class="chevron"></span>
       </a>
     </section>
 
     <section class="content-section reveal" id="about">
-      <h1 class="page-title">O mně</h1>
-      <p class="about-text">
+      <h1 class="page-title" data-i18n="aboutTitle">O mně</h1>
+      <p class="about-text" data-i18n="aboutText">
         Jsem středoškolský student se zájmem o programování, hardware a správu operačních systémů.
         Baví mě řešit problémy, bez ohledu jak moc podstatné jsou, ať už jde o zahleněný Windows nebo modifikace do hry, která je už dávno časem zapomenuta.
         Baví mě práce v Inkscape, Photoshopu, Paint.Net-u, Blenderu a správa či stavba počítačů.
@@ -63,52 +69,52 @@
     </section>
 
     <section class="content-section reveal" id="projects">
-      <h1 class="page-title">Projekty</h1>
+      <h1 class="page-title" data-i18n="projectsTitle">Projekty</h1>
 
       <h2 class="section-title">Windows Software</h2>
       <ul class="project-list">
-        <li><a href="https://github.com/tomandesMSH/KASPAR">KASPAR</a> - Windows "debloater", sada nástrojů pro úpravu systému (C#, WinUI 3)
+        <li><a href="https://github.com/tomandesMSH/KASPAR">KASPAR</a><span data-i18n="pKaspar"> - Windows "debloater", sada nástrojů pro úpravu systému (C#, WinUI 3)</span>
           <ul>
-            <li><a href="https://tomandesmsh.github.io/KASPARDocs/">Dokumentace</a></li>
-            <li><a href="https://github.com/tomandesMSH/KASPAR/releases/latest">Stáhnout</a></li>
-            <li><a href="https://github.com/tomandesMSH/Windows-LocalAccount">KasparNRO</a> - Instalace Windows bez internetu s lokálním účtem (Batch)</li>
+            <li><a href="https://tomandesmsh.github.io/KASPARDocs/" data-i18n="docs">Dokumentace</a></li>
+            <li><a href="https://github.com/tomandesMSH/KASPAR/releases/latest" data-i18n="download">Stáhnout</a></li>
+            <li><a href="https://github.com/tomandesMSH/Windows-LocalAccount">KasparNRO</a><span data-i18n="pKasparNro"> - Instalace Windows bez internetu s lokálním účtem (Batch)</span></li>
           </ul>
           <div class="project-shots">
             <figure class="shot" data-label="screenshots/kaspar-1.png"><img src="screenshots/kaspar-1.png" alt="KASPAR - screenshot 1" loading="lazy" onerror="this.remove()"></figure>
             <figure class="shot" data-label="screenshots/kaspar-2.png"><img src="screenshots/kaspar-2.png" alt="KASPAR - screenshot 2" loading="lazy" onerror="this.remove()"></figure>
           </div>
         </li>
-        <li><a href="https://github.com/tomandesMSH/Keyboard-Utils">Keyboard Utils</a> - Aplikace pro cvičení na klavír. Přehrává skladby z MIDI/MusicXML jako padající noty, poslouchá, co hraješ, hodnotí tě a nahrává tvoje hraní. (C#)
+        <li><a href="https://github.com/tomandesMSH/Keyboard-Utils">Keyboard Utils</a><span data-i18n="pKeyboardUtils"> - Aplikace pro cvičení na klavír. Přehrává skladby z MIDI/MusicXML jako padající noty, poslouchá, co hraješ, hodnotí tě a nahrává tvoje hraní. (C#)</span>
           <ul>
-            <li><a href="https://github.com/tomandesMSH/Keyboard-Utils/releases/latest">Stáhnout</a></li>
+            <li><a href="https://github.com/tomandesMSH/Keyboard-Utils/releases/latest" data-i18n="download">Stáhnout</a></li>
           </ul>
           <div class="project-shots">
             <figure class="shot" data-label="screenshots/keyboard-utils-1.png"><img src="screenshots/keyboard-utils-1.png" alt="Keyboard Utils - screenshot 1" loading="lazy" onerror="this.remove()"></figure>
             <figure class="shot" data-label="screenshots/keyboard-utils-2.png"><img src="screenshots/keyboard-utils-2.png" alt="Keyboard Utils - screenshot 2" loading="lazy" onerror="this.remove()"></figure>
           </div>
         </li>
-        <li><a href="https://github.com/tomandesMSH/Custom-AutoPlay">Custom-AutoPlay</a> - Nástroj pro automatickou úpravu registrů Windows AutoPlay (Python)
+        <li><a href="https://github.com/tomandesMSH/Custom-AutoPlay">Custom-AutoPlay</a><span data-i18n="pCustomAutoplay"> - Nástroj pro automatickou úpravu registrů Windows AutoPlay (Python)</span>
           <ul>
-            <li><a href="https://tomandesmsh.github.io/Custom-AutoPlay-Docs/">Dokumentace</a></li>
-            <li><a href="https://github.com/tomandesMSH/Custom-AutoPlay/releases/latest">Stáhnout</a></li>
+            <li><a href="https://tomandesmsh.github.io/Custom-AutoPlay-Docs/" data-i18n="docs">Dokumentace</a></li>
+            <li><a href="https://github.com/tomandesMSH/Custom-AutoPlay/releases/latest" data-i18n="download">Stáhnout</a></li>
           </ul>
           <div class="project-shots">
             <figure class="shot" data-label="screenshots/custom-autoplay-1.png"><img src="screenshots/custom-autoplay-1.png" alt="Custom-AutoPlay - screenshot 1" loading="lazy" onerror="this.remove()"></figure>
             <figure class="shot" data-label="screenshots/custom-autoplay-2.png"><img src="screenshots/custom-autoplay-2.png" alt="Custom-AutoPlay - screenshot 2" loading="lazy" onerror="this.remove()"></figure>
           </div>
         </li>
-        <li><a href="https://github.com/tomandesMSH/SoundpadTranslator">Soundpad Translator</a> - Druhá klávesnice jako soundboard pro Soundpad. (C#)
+        <li><a href="https://github.com/tomandesMSH/SoundpadTranslator">Soundpad Translator</a><span data-i18n="pSoundpad"> - Druhá klávesnice jako soundboard pro Soundpad. (C#)</span>
           <ul>
-            <li><a href="https://github.com/tomandesMSH/SoundpadTranslator/releases/latest">Stáhnout</a></li>
+            <li><a href="https://github.com/tomandesMSH/SoundpadTranslator/releases/latest" data-i18n="download">Stáhnout</a></li>
           </ul>
           <div class="project-shots">
             <figure class="shot" data-label="screenshots/soundpad-translator-1.png"><img src="screenshots/soundpad-translator-1.png" alt="Soundpad Translator - screenshot 1" loading="lazy" onerror="this.remove()"></figure>
             <figure class="shot" data-label="screenshots/soundpad-translator-2.png"><img src="screenshots/soundpad-translator-2.png" alt="Soundpad Translator - screenshot 2" loading="lazy" onerror="this.remove()"></figure>
           </div>
         </li>
-        <li><a href="https://github.com/tomandesMSH/ClipThat">ClipThat</a> - Náhrada historie schránky z Windows 11. (Python)
+        <li><a href="https://github.com/tomandesMSH/ClipThat">ClipThat</a><span data-i18n="pClipThat"> - Náhrada historie schránky z Windows 11. (Python)</span>
           <ul>
-            <li><a href="https://github.com/tomandesMSH/ClipThat/releases/latest">Stáhnout</a></li>
+            <li><a href="https://github.com/tomandesMSH/ClipThat/releases/latest" data-i18n="download">Stáhnout</a></li>
           </ul>
           <div class="project-shots">
             <figure class="shot" data-label="screenshots/clipthat-1.png"><img src="screenshots/clipthat-1.png" alt="ClipThat - screenshot 1" loading="lazy" onerror="this.remove()"></figure>
@@ -117,11 +123,11 @@
         </li>
       </ul>
 
-      <h2 class="section-title">Webové projekty</h2>
+      <h2 class="section-title" data-i18n="webProjects">Webové projekty</h2>
       <ul class="project-list">
-        <li><a href="https://keyboardheromuzio.vercel.app/">Keyboard Hero</a> - Webová aplikace pro ZUŠ Moravský Krumlov s cílem motivovat děti k pravidelnému domácímu cvičení na hudební nástroj hravou formou. (TypeScript)
+        <li><a href="https://keyboardheromuzio.vercel.app/">Keyboard Hero</a><span data-i18n="pKeyboardHero"> - Webová aplikace pro ZUŠ Moravský Krumlov s cílem motivovat děti k pravidelnému domácímu cvičení na hudební nástroj hravou formou. (TypeScript)</span>
           <ul>
-            <li><a href="https://tomandesmsh.github.io/Keyboard-Hero-Docs/">Dokumentace</a></li>
+            <li><a href="https://tomandesmsh.github.io/Keyboard-Hero-Docs/" data-i18n="docs">Dokumentace</a></li>
             <li><a href="https://github.com/tomandesMSH/Keyboard-Hero">GitHub</a></li>
           </ul>
           <div class="project-shots">
@@ -129,7 +135,7 @@
             <figure class="shot" data-label="screenshots/keyboard-hero-2.png"><img src="screenshots/keyboard-hero-2.png" alt="Keyboard Hero - screenshot 2" loading="lazy" onerror="this.remove()"></figure>
           </div>
         </li>
-        <li><a href="https://tomandesmsh.github.io/compendium-p3r/">Persona 3 Reload - Compendium</a> - Kompletní Compendium ze hry Persona 3 Reload. (HTML, JS)
+        <li><a href="https://tomandesmsh.github.io/compendium-p3r/">Persona 3 Reload - Compendium</a><span data-i18n="pCompendium"> - Kompletní Compendium ze hry Persona 3 Reload. (HTML, JS)</span>
           <ul>
             <li><a href="https://github.com/tomandesMSH/compendium-p3r">GitHub</a></li>
           </ul>
@@ -138,7 +144,7 @@
             <figure class="shot" data-label="screenshots/compendium-p3r-2.png"><img src="screenshots/compendium-p3r-2.png" alt="Persona 3 Reload - Compendium - screenshot 2" loading="lazy" onerror="this.remove()"></figure>
           </div>
         </li>
-        <li><a href="https://neofetch-readme.vercel.app/">neofetch-readme</a> - Animovaná karta ve stylu neofetch pro GitHub profil README. (Python, JS)
+        <li><a href="https://neofetch-readme.vercel.app/">neofetch-readme</a><span data-i18n="pNeofetch"> - Animovaná karta ve stylu neofetch pro GitHub profil README. (Python, JS)</span>
           <ul>
             <li><a href="https://github.com/tomandesMSH/neofetch-readme">GitHub</a></li>
           </ul>
@@ -147,7 +153,7 @@
             <figure class="shot" data-label="screenshots/neofetch-readme-2.png"><img src="screenshots/neofetch-readme-2.png" alt="neofetch-readme - screenshot 2" loading="lazy" onerror="this.remove()"></figure>
           </div>
         </li>
-        <li><a href="https://tomandesmsh.github.io/P3Rp/">P3R Portfolio</a> - Druhé portfolio ve stylu Persona 3 Reload. (HTML, CSS, JS)
+        <li><a href="https://tomandesmsh.github.io/P3Rp/">P3R Portfolio</a><span data-i18n="pP3rp"> - Druhé portfolio ve stylu Persona 3 Reload. (HTML, CSS, JS)</span>
           <ul>
             <li><a href="https://github.com/tomandesMSH/P3Rp">GitHub</a></li>
           </ul>
@@ -156,28 +162,28 @@
             <figure class="shot" data-label="screenshots/p3r-portfolio-2.png"><img src="screenshots/p3r-portfolio-2.png" alt="P3R Portfolio - screenshot 2" loading="lazy" onerror="this.remove()"></figure>
           </div>
         </li>
-        <li><a href="https://tomandesmsh.github.io/SonicDecomp/">Sonic Decompilation</a> - Návod, jak legálně vytvářet dekompilace her Sonic (RSDK, HTML, CSS).
+        <li><a href="https://tomandesmsh.github.io/SonicDecomp/">Sonic Decompilation</a><span data-i18n="pSonic"> - Návod, jak legálně vytvářet dekompilace her Sonic (RSDK, HTML, CSS).</span>
           <ul>
             <li><a href="https://github.com/tomandesMSH/SonicDecomp">GitHub</a></li>
           </ul>
         </li>
       </ul>
 
-      <h2 class="section-title">Hry a mody</h2>
+      <h2 class="section-title" data-i18n="games">Hry a mody</h2>
       <ul class="project-list">
-        <li><a href="https://github.com/tomandesMSH/FlashTBoI-Mods">TBoI Flash Mods</a> - Instalátor modů pro původní Flash verzi The Binding of Isaac. Zaškrtneš mody, klikneš na Instalovat a hraješ. (Python, C#)
+        <li><a href="https://github.com/tomandesMSH/FlashTBoI-Mods">TBoI Flash Mods</a><span data-i18n="pTboiMods"> - Instalátor modů pro původní Flash verzi The Binding of Isaac. Zaškrtneš mody, klikneš na Instalovat a hraješ. (Python, C#)</span>
           <ul>
-            <li><a href="https://github.com/tomandesMSH/FlashTBoI-Mods/releases/latest">Stáhnout</a></li>
-            <li><a href="https://github.com/tomandesMSH/FlashTBoI-EID">Flash EID</a> - Popisy itemů, trinketů, karet a pilulek přímo ve hře. (Lua, ActionScript, Python)</li>
-            <li><a href="https://github.com/tomandesMSH/FlashTBoI-StatsHUD">Stats HUD</a> - Aktuální staty Isaaca a šance na devil/angel room, jako v Repentance. (ActionScript, Python)</li>
-            <li><a href="https://github.com/tomandesMSH/FlashTBoI-DebugConsole">Debug Console</a> - Debug konzole z Repentance: giveitem, spawn, goto, stage... (ActionScript, Python)</li>
+            <li><a href="https://github.com/tomandesMSH/FlashTBoI-Mods/releases/latest" data-i18n="download">Stáhnout</a></li>
+            <li><a href="https://github.com/tomandesMSH/FlashTBoI-EID">Flash EID</a><span data-i18n="pEid"> - Popisy itemů, trinketů, karet a pilulek přímo ve hře. (Lua, ActionScript, Python)</span></li>
+            <li><a href="https://github.com/tomandesMSH/FlashTBoI-StatsHUD">Stats HUD</a><span data-i18n="pStatsHud"> - Aktuální staty Isaaca a šance na devil/angel room, jako v Repentance. (ActionScript, Python)</span></li>
+            <li><a href="https://github.com/tomandesMSH/FlashTBoI-DebugConsole">Debug Console</a><span data-i18n="pDebugConsole"> - Debug konzole z Repentance: giveitem, spawn, goto, stage... (ActionScript, Python)</span></li>
           </ul>
           <div class="project-shots">
             <figure class="shot" data-label="screenshots/tboi-flash-mods-1.png"><img src="screenshots/tboi-flash-mods-1.png" alt="TBoI Flash Mods - screenshot 1" loading="lazy" onerror="this.remove()"></figure>
             <figure class="shot" data-label="screenshots/tboi-flash-mods-2.png"><img src="screenshots/tboi-flash-mods-2.png" alt="TBoI Flash Mods - screenshot 2" loading="lazy" onerror="this.remove()"></figure>
           </div>
         </li>
-        <li><a href="https://github.com/tomandesMSH/ShareSeed">ShareSeed</a> - Mod pro The Binding of Isaac: Repentance+. Zabalí seed i tvoje odemčené věci do jednoho kódu, takže run hraje každý stejně. (Lua)
+        <li><a href="https://github.com/tomandesMSH/ShareSeed">ShareSeed</a><span data-i18n="pShareSeed"> - Mod pro The Binding of Isaac: Repentance+. Zabalí seed i tvoje odemčené věci do jednoho kódu, takže run hraje každý stejně. (Lua)</span>
           <ul>
             <li><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3819928092">Steam Workshop</a></li>
           </ul>
@@ -186,37 +192,37 @@
             <figure class="shot" data-label="screenshots/shareseed-2.png"><img src="screenshots/shareseed-2.png" alt="ShareSeed - screenshot 2" loading="lazy" onerror="this.remove()"></figure>
           </div>
         </li>
-        <li><a href="https://github.com/tomandesMSH/tboi-upgrader">Item Upgrader</a> - Mod pro The Binding of Isaac: Repentance+, vylepšování a duplikace itemů. (Lua)
+        <li><a href="https://github.com/tomandesMSH/tboi-upgrader">Item Upgrader</a><span data-i18n="pUpgrader"> - Mod pro The Binding of Isaac: Repentance+, vylepšování a duplikace itemů. (Lua)</span>
           <div class="project-shots">
             <figure class="shot" data-label="screenshots/item-upgrader-1.png"><img src="screenshots/item-upgrader-1.png" alt="Item Upgrader - screenshot 1" loading="lazy" onerror="this.remove()"></figure>
             <figure class="shot" data-label="screenshots/item-upgrader-2.png"><img src="screenshots/item-upgrader-2.png" alt="Item Upgrader - screenshot 2" loading="lazy" onerror="this.remove()"></figure>
           </div>
         </li>
-        <li><a href="https://github.com/tomandesMSH/Just-Shapes-and-Beats-save-editor">JSaB Save Editor</a> - Save editor pro hru Just Shapes and Beats. (Python)
+        <li><a href="https://github.com/tomandesMSH/Just-Shapes-and-Beats-save-editor">JSaB Save Editor</a><span data-i18n="pJsab"> - Save editor pro hru Just Shapes and Beats. (Python)</span>
           <ul>
-            <li><a href="https://github.com/tomandesMSH/Just-Shapes-and-Beats-save-editor/releases/latest">Stáhnout</a></li>
+            <li><a href="https://github.com/tomandesMSH/Just-Shapes-and-Beats-save-editor/releases/latest" data-i18n="download">Stáhnout</a></li>
           </ul>
           <div class="project-shots">
             <figure class="shot" data-label="screenshots/jsab-save-editor-1.png"><img src="screenshots/jsab-save-editor-1.png" alt="JSaB Save Editor - screenshot 1" loading="lazy" onerror="this.remove()"></figure>
             <figure class="shot" data-label="screenshots/jsab-save-editor-2.png"><img src="screenshots/jsab-save-editor-2.png" alt="JSaB Save Editor - screenshot 2" loading="lazy" onerror="this.remove()"></figure>
           </div>
         </li>
-        <li><a href="https://github.com/tomandesMSH/WASD-to-arrows">WASD-to-arrows</a> - Ovládání WASD ve hrách podporující jen šipky. (Python)
+        <li><a href="https://github.com/tomandesMSH/WASD-to-arrows">WASD-to-arrows</a><span data-i18n="pWasd"> - Ovládání WASD ve hrách podporující jen šipky. (Python)</span>
           <ul>
-            <li><a href="https://github.com/tomandesMSH/WASD-to-arrows/releases/latest">Stáhnout</a></li>
+            <li><a href="https://github.com/tomandesMSH/WASD-to-arrows/releases/latest" data-i18n="download">Stáhnout</a></li>
           </ul>
         </li>
       </ul>
 
-      <h2 class="section-title">Ostatní</h2>
+      <h2 class="section-title" data-i18n="other">Ostatní</h2>
       <ul class="project-list">
-        <li><a href="https://github.com/tomandesMSH/VytahniTo">VytáhniTo</a> - Rozšíření pro Chrome, které stáhne všechny obrázky a videa ze stránky. (JS)
+        <li><a href="https://github.com/tomandesMSH/VytahniTo">VytáhniTo</a><span data-i18n="pVytahnito"> - Rozšíření pro Chrome, které stáhne všechny obrázky a videa ze stránky. (JS)</span>
           <div class="project-shots">
             <figure class="shot" data-label="screenshots/vytahnito-1.png"><img src="screenshots/vytahnito-1.png" alt="VytáhniTo - screenshot 1" loading="lazy" onerror="this.remove()"></figure>
             <figure class="shot" data-label="screenshots/vytahnito-2.png"><img src="screenshots/vytahnito-2.png" alt="VytáhniTo - screenshot 2" loading="lazy" onerror="this.remove()"></figure>
           </div>
         </li>
-        <li><a href="https://github.com/tomandesMSH/ClassroomSearch">ClassroomSearch</a> - Tampermonkey userscript: živé vyhledávání a vlastní štítky v Google Classroom. (JS)
+        <li><a href="https://github.com/tomandesMSH/ClassroomSearch">ClassroomSearch</a><span data-i18n="pClassroom"> - Tampermonkey userscript: živé vyhledávání a vlastní štítky v Google Classroom. (JS)</span>
           <ul>
             <li><a href="https://greasyfork.org/en/scripts/604099-google-classroom-search">Greasy Fork</a></li>
           </ul>
@@ -225,18 +231,18 @@
             <figure class="shot" data-label="screenshots/classroomsearch-2.png"><img src="screenshots/classroomsearch-2.png" alt="ClassroomSearch - screenshot 2" loading="lazy" onerror="this.remove()"></figure>
           </div>
         </li>
-        <li><a href="https://github.com/tomandesMSH/QUbuntu">QUbuntu</a> - Rychlý přístup k Ubuntu serveru: Wake-on-LAN, SSH, CasaOS, Jellyfin. (Python)
+        <li><a href="https://github.com/tomandesMSH/QUbuntu">QUbuntu</a><span data-i18n="pQubuntu"> - Rychlý přístup k Ubuntu serveru: Wake-on-LAN, SSH, CasaOS, Jellyfin. (Python)</span>
           <ul>
-            <li><a href="https://tomandesmsh.github.io/QUbuntu/">Web</a></li>
+            <li><a href="https://tomandesmsh.github.io/QUbuntu/" data-i18n="website">Web</a></li>
           </ul>
           <div class="project-shots">
             <figure class="shot" data-label="screenshots/qubuntu-1.png"><img src="screenshots/qubuntu-1.png" alt="QUbuntu - screenshot 1" loading="lazy" onerror="this.remove()"></figure>
             <figure class="shot" data-label="screenshots/qubuntu-2.png"><img src="screenshots/qubuntu-2.png" alt="QUbuntu - screenshot 2" loading="lazy" onerror="this.remove()"></figure>
           </div>
         </li>
-        <li><a href="https://github.com/tomandesMSH/mk-pkg">mk-pkg</a> - Balíček, který rozpozná a zachytí vstup z druhé (makro) klávesnice. Používá ho Soundpad Translator a Keyboard Utils.
+        <li><a href="https://github.com/tomandesMSH/mk-pkg">mk-pkg</a><span data-i18n="pMkPkg"> - Balíček, který rozpozná a zachytí vstup z druhé (makro) klávesnice. Používá ho Soundpad Translator a Keyboard Utils.</span>
           <ul>
-            <li><a href="https://github.com/tomandesMSH/mk-pkg/releases/latest">Stáhnout</a></li>
+            <li><a href="https://github.com/tomandesMSH/mk-pkg/releases/latest" data-i18n="download">Stáhnout</a></li>
           </ul>
         </li>
       </ul>
@@ -249,14 +255,14 @@
 
 
 </pre>
-      <h1 class="page-title">Galerie</h1>
+      <h1 class="page-title" data-i18n="galleryTitle">Galerie</h1>
 
       <div class="gallery-row">
-        <p class="gallery-caption">Certifikáty</p>
+        <p class="gallery-caption" data-i18n="gCerts">Certifikáty</p>
         <div class="gallery-grid gallery-grid-certs">
           <figure class="gallery-item">
             <img src="gallery/fcc.png">
-            <figcaption class="gallery-item-caption">FreeCodeCamp & Microsoft - C# certifikát</figcaption>
+            <figcaption class="gallery-item-caption" data-i18n="gFcc">FreeCodeCamp & Microsoft - C# certifikát</figcaption>
           </figure>
           <figure class="gallery-item">
             <figcaption class="gallery-item-caption"></figcaption>
@@ -265,29 +271,29 @@
       </div>
 
       <div class="gallery-row">
-        <p class="gallery-caption">Projekty v Inkscape</p>
+        <p class="gallery-caption" data-i18n="gInkscape">Projekty v Inkscape</p>
         <div class="gallery-grid">
           <figure class="gallery-item">
             <img src="gallery/lowpoly.png">
-            <figcaption class="gallery-item-caption">Lowpoly kočka</figcaption>
+            <figcaption class="gallery-item-caption" data-i18n="gCat">Lowpoly kočka</figcaption>
           </figure>
           <figure class="gallery-item">
             <img src="gallery/lowpoly2.png">
-            <figcaption class="gallery-item-caption">Lowpoly ptáček</figcaption>
+            <figcaption class="gallery-item-caption" data-i18n="gBird">Lowpoly ptáček</figcaption>
           </figure>
           <figure class="gallery-item">
             <img src="gallery/vektor_pepsi.png">
-            <figcaption class="gallery-item-caption">Vektor logo Pepsi</figcaption>
+            <figcaption class="gallery-item-caption" data-i18n="gPepsi">Vektor logo Pepsi</figcaption>
           </figure>
           <figure class="gallery-item">
             <img src="gallery/vektor_spotify.png">
-            <figcaption class="gallery-item-caption">Vektor logo Spotify</figcaption>
+            <figcaption class="gallery-item-caption" data-i18n="gSpotify">Vektor logo Spotify</figcaption>
           </figure>
         </div>
       </div>
 
       <div class="gallery-row">
-        <p class="gallery-caption">PowerPoint prezentace</p>
+        <p class="gallery-caption" data-i18n="gPptx">PowerPoint prezentace</p>
         <div class="gallery-grid">
           <figure class="gallery-item">
             <a class="gallery-link" href="https://1drv.ms/p/c/a63918c99464a3e6/IQCiKZo5WYGnQ4Rug7zhQsLwAYxxiscKJKU7phMjOraJ2nM?e=vb5bHw" target="_blank" rel="noopener">
@@ -296,7 +302,7 @@
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.07 0l2.83-2.83a5 5 0 0 0-7.07-7.07L11.5 4.5"></path><path d="M14 11a5 5 0 0 0-7.07 0L4.1 13.83a5 5 0 0 0 7.07 7.07L12.5 19.5"></path></svg>
               </span>
             </a>
-            <figcaption class="gallery-item-caption">RAM, vysvětlení XMP/EXPO</figcaption>
+            <figcaption class="gallery-item-caption" data-i18n="gRam">RAM, vysvětlení XMP/EXPO</figcaption>
           </figure>
           <figure class="gallery-item">
             <a class="gallery-link" href="https://1drv.ms/p/c/a63918c99464a3e6/IQCLFAAi6cOlR4maG7xCAEmwAY0WkQRxt8jXWdoo5GlXFOE?e=uiuCNf" target="_blank" rel="noopener">
@@ -305,7 +311,7 @@
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.07 0l2.83-2.83a5 5 0 0 0-7.07-7.07L11.5 4.5"></path><path d="M14 11a5 5 0 0 0-7.07 0L4.1 13.83a5 5 0 0 0 7.07 7.07L12.5 19.5"></path></svg>
               </span>
             </a>
-            <figcaption class="gallery-item-caption">GPU, vysvětlení základů</figcaption>
+            <figcaption class="gallery-item-caption" data-i18n="gGpu">GPU, vysvětlení základů</figcaption>
           </figure>
           <figure class="gallery-item">
             <a class="gallery-link" href="https://1drv.ms/p/c/a63918c99464a3e6/IQCBzBGrVF7KRbYt3qQC0U9FATTZX_7_RRV5H0vXKNuFR4Y?e=J2bcev" target="_blank" rel="noopener">
@@ -323,13 +329,13 @@
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.07 0l2.83-2.83a5 5 0 0 0-7.07-7.07L11.5 4.5"></path><path d="M14 11a5 5 0 0 0-7.07 0L4.1 13.83a5 5 0 0 0 7.07 7.07L12.5 19.5"></path></svg>
               </span>
             </a>
-            <figcaption class="gallery-item-caption">Monetizace Windows 11</figcaption>
+            <figcaption class="gallery-item-caption" data-i18n="gMonetize">Monetizace Windows 11</figcaption>
           </figure>
         </div>
       </div>
 
       <div class="gallery-row">
-        <p class="gallery-caption">Ostatní</p>
+        <p class="gallery-caption" data-i18n="gOther">Ostatní</p>
         <div class="gallery-grid">
           <figure class="gallery-item">
             <a class="gallery-link" href="https://github.com/tomandesMSH/Yaroslav-and-Esau" target="_blank" rel="noopener">
@@ -338,7 +344,7 @@
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.07 0l2.83-2.83a5 5 0 0 0-7.07-7.07L11.5 4.5"></path><path d="M14 11a5 5 0 0 0-7.07 0L4.1 13.83a5 5 0 0 0 7.07 7.07L12.5 19.5"></path></svg>
               </span>
             </a>
-            <figcaption class="gallery-item-caption">Hra v Construct3</figcaption>
+            <figcaption class="gallery-item-caption" data-i18n="gConstruct">Hra v Construct3</figcaption>
           </figure>
           <figure class="gallery-item">
             <img src="gallery/cisco.png">
@@ -358,12 +364,12 @@
 
   <footer id="contact" class="reveal">
     <div class="footer-inner">
-      <p class="footer-eyebrow">Kontakty:</p>
+      <p class="footer-eyebrow" data-i18n="contactTitle">Kontakty:</p>
       <div class="social-links">
         <a href="https://github.com/tomandesMSH" target="_blank" rel="noopener" class="social-link">GitHub</a>
         <a href="mailto:tomandes@tuta.io" class="social-link">Email</a>
         <a href="https://instagram.com/thom.vaa" class="social-link">Instagram</a>
-        <a href="report/" class="social-link">Nahlásit problém</a>
+        <a href="report/" class="social-link" data-i18n="report">Nahlásit problém</a>
 
 
       </div>
@@ -376,16 +382,16 @@
   </div>
 
   <!-- ░░ P3R-STYLE SOCIAL LINK POPUP ░░ -->
-  <div id="p3Toast" class="p3-toast" role="dialog" aria-label="Odkaz na další portfolio">
+  <div id="p3Toast" class="p3-toast" role="dialog" aria-label="Odkaz na další portfolio" data-i18n-aria="p3Label">
     <div class="p3-toast-panel">
       <div class="p3-toast-stripe"></div>
-      <button class="p3-toast-close" id="p3ToastClose" aria-label="Zavřít">×</button>
+      <button class="p3-toast-close" id="p3ToastClose" aria-label="Zavřít" data-i18n-aria="close">×</button>
       <div class="p3-toast-body">
-        <p class="p3-toast-eyebrow">vítej v mojí sametové místnosti</p>
+        <p class="p3-toast-eyebrow" data-i18n="p3Eyebrow">vítej v mojí sametové místnosti</p>
         <p class="p3-toast-title">P3R Portfolio</p>
-        <p class="p3-toast-sub">Mrkni na moje druhé portfolio v Persona 3 Reload stylu | Zatím slouží výhradně jako showcase.</p>
+        <p class="p3-toast-sub" data-i18n="p3Sub">Mrkni na moje druhé portfolio v Persona 3 Reload stylu | Zatím slouží výhradně jako showcase.</p>
         <a href="https://tomandesmsh.github.io/P3Rp/" target="_blank" rel="noopener" class="p3-toast-link" id="p3ToastLink">
-          Otevřít <span aria-hidden="true">→</span>
+          <span data-i18n="open">Otevřít</span> <span aria-hidden="true">→</span>
         </a>
       </div>
     </div>
@@ -479,6 +485,7 @@
     p3ToastClose.addEventListener('click', dismissP3Toast);
     p3ToastLink.addEventListener('click', dismissP3Toast);
   </script>
+  <script src="i18n.js"></script>
 
 </body>
 </html>
