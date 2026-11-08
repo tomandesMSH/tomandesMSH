@@ -12,25 +12,15 @@
   const app = document.getElementById('app');
   const zusRow = document.getElementById('zusRow');
   const zus = document.getElementById('zus');
-  const title = document.getElementById('title');
-  const descriptionLabel = document.getElementById('descriptionLabel');
-  const descriptionHelp = document.getElementById('descriptionHelp');
   const error = document.getElementById('error');
   const send = document.getElementById('send');
   const startedAt = Date.now();
 
-  // Pupils get simpler words and no technical fields.
+  // "Jsem žákem ZUŠ" is offered with the school's apps only; it just marks the report.
   function update() {
     const school = ZUS_APPS.includes(app.value);
     zusRow.hidden = !school;
     if (!school) zus.checked = false;
-    const simple = zus.checked;
-    form.querySelectorAll('.technical').forEach((field) => (field.hidden = simple));
-    title.placeholder = simple ? title.dataset.hintZus : title.dataset.hint;
-    descriptionLabel.textContent = simple ? 'Co se stalo?' : 'Popis';
-    descriptionHelp.textContent = simple
-      ? 'Napiš vlastními slovy, co se stalo a co jsi zrovna dělal(a). Klidně krátce.'
-      : 'Co se stalo, co jsi čekal(a) a co se stalo místo toho.';
   }
 
   // Filled in from the link (an app's "Report a bug").
@@ -39,7 +29,6 @@
   if (params.get('version')) document.getElementById('version').value = params.get('version').slice(0, 40);
   if (params.get('zus') === '1') zus.checked = true;
   app.addEventListener('change', update);
-  zus.addEventListener('change', update);
   update();
 
   function showError(message) {
@@ -69,15 +58,11 @@
       form.hidden = true;
       const done = document.getElementById('done');
       const text = document.getElementById('doneText');
-      if (result.url) {
-        text.textContent = `Hlášení č. ${result.number} je uložené. `;
-        const link = document.createElement('a');
-        link.href = result.url;
-        link.textContent = 'Zobrazit na GitHubu';
-        text.append(link);
-      } else {
-        text.textContent = 'Hlášení dorazilo autorovi. Moc díky, že pomáháš appku vylepšit!';
-      }
+      text.textContent = `Hlášení č. ${result.number} je uložené. `;
+      const link = document.createElement('a');
+      link.href = result.url;
+      link.textContent = 'Zobrazit na GitHubu';
+      text.append(link);
       done.hidden = false;
       done.scrollIntoView({ block: 'start' });
     } catch (err) {

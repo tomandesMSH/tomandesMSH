@@ -81,13 +81,8 @@ input:focus, select:focus, textarea:focus { outline: 2px solid var(--blue-accent
 }
 .kinds label:has(input:checked) { border-color: var(--blue-accent); background: rgba(37, 99, 235, .15); }
 
-.zus {
-  display: flex; gap: 12px; align-items: flex-start;
-  background: rgba(225, 68, 50, .1); border: 1px solid rgba(225, 68, 50, .45);
-  border-radius: 12px; padding: 12px 14px; margin: 0 0 20px; cursor: pointer;
-}
-.zus input { margin-top: 5px; width: 18px; height: 18px; accent-color: #e14432; }
-.zus small { color: var(--text-sub); }
+.zus { display: flex; gap: 10px; align-items: center; margin: -8px 0 20px; cursor: pointer; }
+.zus input { width: 18px; height: 18px; accent-color: var(--blue-accent); }
 
 /* Hidden from people (not display:none - some bots skip those). */
 .trap { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }

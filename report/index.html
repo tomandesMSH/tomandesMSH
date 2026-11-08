@@ -40,11 +40,10 @@
         </select>
       </div>
 
-      <!-- Only for the apps the school uses (data-zus-apps in report.js). -->
+      <!-- Only for the apps the school uses (ZUS_APPS in report.js). It only marks the report. -->
       <label class="zus" id="zusRow" hidden>
         <input type="checkbox" id="zus" name="zus">
-        <span><b>Jsem žákem ZUŠ Moravský Krumlov</b><br>
-          <small>Formulář se zjednoduší a&nbsp;autor uvidí, že hlášení je od žáka.</small></span>
+        <span>Jsem žákem ZUŠ Moravský Krumlov</span>
       </label>
 
       <fieldset class="field kinds">
@@ -57,22 +56,22 @@
       <div class="field">
         <label for="title">Krátce, o co jde</label>
         <input id="title" name="title" maxlength="120" required
-               data-hint="např. Metronom po zapnutí nehraje" data-hint-zus="např. Nejde mi pustit písnička">
+               placeholder="např. Metronom po zapnutí nehraje">
       </div>
 
       <div class="field">
-        <label for="description" id="descriptionLabel">Popis</label>
-        <p class="help" id="descriptionHelp">Co se stalo, co jsi čekal(a) a&nbsp;co se stalo místo toho.</p>
+        <label for="description">Popis</label>
+        <p class="help">Co se stalo, co jsi čekal(a) a&nbsp;co se stalo místo toho.</p>
         <textarea id="description" name="description" rows="6" maxlength="5000" required></textarea>
       </div>
 
-      <div class="field technical">
+      <div class="field">
         <label for="steps">Jak to zopakovat <span class="opt">nepovinné</span></label>
         <textarea id="steps" name="steps" rows="4" maxlength="3000"
                   placeholder="1. Otevřu skladbu&#10;2. Zapnu metronom&#10;3. …"></textarea>
       </div>
 
-      <div class="field technical">
+      <div class="field">
         <label for="version">Verze aplikace <span class="opt">nepovinné</span></label>
         <input id="version" name="version" maxlength="40" placeholder="např. 1.0.2">
       </div>
