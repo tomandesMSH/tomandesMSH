@@ -13,6 +13,14 @@
   <link rel="stylesheet" href="report.css">
 </head>
 <body>
+  <!-- Background glows and grid, like the home page's hero. -->
+  <div class="backdrop" aria-hidden="true">
+    <div class="grid"></div>
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+  </div>
+
   <header class="top">
     <a href="../" class="logo">tomandesMSH<span class="cursor">_</span></a>
     <a href="../#projects" class="back">← Projekty</a>
@@ -95,6 +103,9 @@
     </form>
 
     <div class="done" id="done" hidden>
+      <div class="check" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>
+      </div>
       <h2>Díky!</h2>
       <p id="doneText">Hlášení dorazilo.</p>
       <p><a href="./" id="again">Nahlásit další</a></p>
