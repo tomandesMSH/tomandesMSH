@@ -1,0 +1,119 @@
+/* The report form - same colours and type as the rest of tomandes.eu (style.css). */
+:root {
+  --bg: #080b14;
+  --bg-card: #0d1117;
+  --blue-mid: #1d3461;
+  --blue-accent: #2563eb;
+  --blue-glow: #3b82f6;
+  --text: #e2e8f0;
+  --text-sub: #94a3b8;
+  --text-muted: #64748b;
+  --border: #1e293b;
+  --error: #f87171;
+  --font: 'Space Grotesk', sans-serif;
+  --mono: 'JetBrains Mono', monospace;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+/* "hidden" must win over the display of .zus and the other flex rows. */
+[hidden] { display: none !important; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 16px/1.6 var(--font);
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--blue-glow); }
+
+.top {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo { font: 600 1.1rem var(--mono); color: var(--text); text-decoration: none; }
+.cursor { color: var(--blue-glow); animation: blink 1s steps(1) infinite; }
+@keyframes blink { 50% { opacity: 0; } }
+.back { color: var(--text-sub); text-decoration: none; }
+.back:hover { color: var(--text); }
+
+.wrap { max-width: 720px; margin: 0 auto; padding: 12px 20px 64px; }
+
+h1 { font-size: clamp(2rem, 6vw, 2.8rem); margin: 8px 0 8px; letter-spacing: -.02em; }
+.lead { color: var(--text-sub); margin: 0 0 28px; }
+
+form {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 24px;
+}
+
+.field { margin: 0 0 20px; border: 0; padding: 0; }
+.field > label, legend { display: block; font-weight: 600; margin-bottom: 6px; }
+.opt { font-weight: 400; color: var(--text-muted); font-size: .85rem; margin-left: 4px; }
+.help { margin: -2px 0 8px; color: var(--text-sub); font-size: .9rem; }
+
+input:not([type=checkbox]):not([type=radio]), select, textarea {
+  width: 100%;
+  font: inherit;
+  color: var(--text);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 10px 12px;
+}
+textarea { resize: vertical; }
+input:focus, select:focus, textarea:focus { outline: 2px solid var(--blue-accent); outline-offset: 1px; border-color: var(--blue-accent); }
+::placeholder { color: var(--text-muted); }
+
+.kinds { display: flex; flex-wrap: wrap; gap: 8px; }
+.kinds legend { width: 100%; }
+.kinds label {
+  display: flex; align-items: center; gap: 8px;
+  border: 1px solid var(--border); border-radius: 999px; padding: 6px 14px; cursor: pointer;
+}
+.kinds label:has(input:checked) { border-color: var(--blue-accent); background: rgba(37, 99, 235, .15); }
+
+.zus {
+  display: flex; gap: 12px; align-items: flex-start;
+  background: rgba(225, 68, 50, .1); border: 1px solid rgba(225, 68, 50, .45);
+  border-radius: 12px; padding: 12px 14px; margin: 0 0 20px; cursor: pointer;
+}
+.zus input { margin-top: 5px; width: 18px; height: 18px; accent-color: #e14432; }
+.zus small { color: var(--text-sub); }
+
+/* Hidden from people (not display:none - some bots skip those). */
+.trap { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
+
+.error { color: var(--error); margin: 0 0 14px; }
+
+button {
+  font: 600 1rem var(--font);
+  color: #fff;
+  background: var(--blue-accent);
+  border: 0;
+  border-radius: 10px;
+  padding: 12px 26px;
+  cursor: pointer;
+}
+button:hover { background: var(--blue-glow); }
+button:disabled { opacity: .6; cursor: progress; }
+
+.done {
+  background: var(--bg-card);
+  border: 1px solid var(--blue-mid);
+  border-radius: 16px;
+  padding: 28px 24px;
+}
+.done h2 { margin: 0 0 8px; font-size: 1.8rem; }
+
+@media (max-width: 560px) {
+  form, .done { padding: 18px; }
+}

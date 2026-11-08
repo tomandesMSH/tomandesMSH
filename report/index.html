@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="theme-color" content="#080b14">
+  <title>Nahlásit problém – tomandesMSH</title>
+  <meta name="description" content="Nahlas chybu, nápad nebo otázku k aplikacím tomandesMSH (Keyboard Utils, Muzio, KASPAR…). Bez GitHub účtu.">
+  <link rel="icon" type="image/png" href="../favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="report.css">
+</head>
+<body>
+  <header class="top">
+    <a href="../" class="logo">tomandesMSH<span class="cursor">_</span></a>
+    <a href="../#projects" class="back">← Projekty</a>
+  </header>
+
+  <main class="wrap">
+    <h1>Nahlásit problém</h1>
+    <p class="lead">
+      Něco nefunguje, máš nápad nebo otázku? Napiš to sem. GitHub účet nepotřebuješ.
+      Hlášení se objeví jako veřejné „issue“ u dané aplikace na GitHubu.
+    </p>
+
+    <form id="report" novalidate>
+      <div class="field">
+        <label for="app">Aplikace</label>
+        <select id="app" name="app" required>
+          <option value="" disabled selected>Vyber aplikaci…</option>
+          <option value="keyboard-utils">Keyboard Utils</option>
+          <option value="keyboard-hero">Keyboard Hero / Muzio</option>
+          <option value="kaspar">KASPAR</option>
+          <option value="custom-autoplay">Custom-AutoPlay</option>
+          <option value="soundpad-translator">Soundpad Translator</option>
+          <option value="clipthat">ClipThat</option>
+          <option value="other">Jiné / tenhle web</option>
+        </select>
+      </div>
+
+      <!-- Only for the apps the school uses (data-zus-apps in report.js). -->
+      <label class="zus" id="zusRow" hidden>
+        <input type="checkbox" id="zus" name="zus">
+        <span><b>Jsem žákem ZUŠ Moravský Krumlov</b><br>
+          <small>Formulář se zjednoduší a&nbsp;autor uvidí, že hlášení je od žáka.</small></span>
+      </label>
+
+      <fieldset class="field kinds">
+        <legend>O co jde</legend>
+        <label><input type="radio" name="kind" value="bug" checked> <span>Něco nefunguje</span></label>
+        <label><input type="radio" name="kind" value="idea"> <span>Nápad na zlepšení</span></label>
+        <label><input type="radio" name="kind" value="question"> <span>Otázka</span></label>
+      </fieldset>
+
+      <div class="field">
+        <label for="title">Krátce, o co jde</label>
+        <input id="title" name="title" maxlength="120" required
+               data-hint="např. Metronom po zapnutí nehraje" data-hint-zus="např. Nejde mi pustit písnička">
+      </div>
+
+      <div class="field">
+        <label for="description" id="descriptionLabel">Popis</label>
+        <p class="help" id="descriptionHelp">Co se stalo, co jsi čekal(a) a&nbsp;co se stalo místo toho.</p>
+        <textarea id="description" name="description" rows="6" maxlength="5000" required></textarea>
+      </div>
+
+      <div class="field technical">
+        <label for="steps">Jak to zopakovat <span class="opt">nepovinné</span></label>
+        <textarea id="steps" name="steps" rows="4" maxlength="3000"
+                  placeholder="1. Otevřu skladbu&#10;2. Zapnu metronom&#10;3. …"></textarea>
+      </div>
+
+      <div class="field technical">
+        <label for="version">Verze aplikace <span class="opt">nepovinné</span></label>
+        <input id="version" name="version" maxlength="40" placeholder="např. 1.0.2">
+      </div>
+
+      <div class="field">
+        <label for="contact">Kontakt <span class="opt">nepovinné</span></label>
+        <p class="help">
+          E-mail nebo jméno, když chceš odpověď. <b>Uvidí ho jen autor</b>, ve veřejném hlášení nebude.
+        </p>
+        <input id="contact" name="contact" maxlength="200" autocomplete="email">
+      </div>
+
+      <!-- A trap for bots: hidden from people, so it stays empty. -->
+      <div class="trap" aria-hidden="true">
+        <label for="website">Web</label>
+        <input id="website" name="website" tabindex="-1" autocomplete="off">
+      </div>
+
+      <p class="error" id="error" role="alert" hidden></p>
+      <button type="submit" id="send">Odeslat</button>
+    </form>
+
+    <div class="done" id="done" hidden>
+      <h2>Díky!</h2>
+      <p id="doneText">Hlášení dorazilo.</p>
+      <p><a href="./" id="again">Nahlásit další</a></p>
+    </div>
+  </main>
+
+  <script src="report.js"></script>
+</body>
+</html>
