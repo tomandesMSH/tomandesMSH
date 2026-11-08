@@ -88,6 +88,36 @@ body {
 .back { color: var(--text-sub); text-decoration: none; transition: color .2s; }
 .back:hover { color: var(--text); }
 
+.top-end { display: flex; align-items: center; gap: 18px; }
+
+/* CZ / EN: a small glassy pill switch. */
+.lang {
+  display: inline-flex;
+  padding: 3px;
+  border-radius: 999px;
+  background: rgba(13, 17, 28, .6);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+.lang button {
+  font: 600 .8rem var(--mono);
+  letter-spacing: .04em;
+  color: var(--text-sub);
+  background: none;
+  border: 0;
+  border-radius: 999px;
+  padding: 5px 12px;
+  box-shadow: none;
+  cursor: pointer;
+  transition: color .2s, background .2s;
+}
+.lang button:hover { color: var(--text); transform: none; box-shadow: none; filter: none; }
+.lang button[aria-pressed="true"] {
+  color: #fff;
+  background: linear-gradient(135deg, var(--blue-glow), var(--blue-accent));
+}
+
 .wrap { max-width: 720px; margin: 0 auto; padding: 20px 20px 72px; animation: fadeUp .7s ease both; }
 
 @keyframes fadeUp {
