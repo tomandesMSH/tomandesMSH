@@ -20,6 +20,7 @@ like what you see? check out <a href="https://github.com/tomandesMSH/neofetch-re
 
 ### Contact
 
+<a href="https://tomandes.eu/"><img src="https://img.shields.io/badge/Web-tomandes.eu-2563EB?style=for-the-badge&logo=googlechrome&logoColor=white" /></a>
 <a href="https://github.com/tomandesMSH"><img src="https://img.shields.io/badge/GitHub-14163C?style=for-the-badge&logo=github&logoColor=white" /></a>
 <a href="https://www.instagram.com/thom.vaa"><img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" /></a>
 <img src="https://img.shields.io/badge/Discord-thom.va-5865F2?style=for-the-badge&logo=discord&logoColor=white" />
