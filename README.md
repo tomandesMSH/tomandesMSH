@@ -9,7 +9,14 @@
 ## O mně
 
 Student SOŠ EDUCAnet Brno. Píšu hlavně nástroje pro Windows v C# a Pythonu, webové aplikace v HTML/JS/TS
-a mody do her (většinou The Binding of Isaac). Trochu dělám v Blenderu a Inkscape.
+a mody do her. Trochu dělám v Blenderu a Inkscape.
+
+Většina mých projektů vznikla z toho, že mi něco chybělo nebo vadilo: KASPAR kvůli zbytečnostem ve Windows,
+ClipThat jako náhrada historie schránky, Keyboard Utils na cvičení na klavír. Rád se taky vrtám ve starších hrách
+a jejich souborech, mimo jiné v původní Flash verzi Isaaca nebo v save souborech Just Shapes & Beats.
+
+Mimo programování stavím a spravuju počítače. Doma mi běží Ubuntu server s Jellyfinem a CasaOS, na kterém si
+zkouším věci kolem Linuxu a sítí. Na desktopu používám Tiny11 a CachyOS.
 
 Na čem teď dělám:
 
