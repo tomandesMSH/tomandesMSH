@@ -21,7 +21,7 @@ zkouším věci kolem Linuxu a sítí. Na desktopu používám Tiny11 a CachyOS.
 Na čem teď dělám:
 
 - [**Keyboard Utils**](https://github.com/tomandesMSH/Keyboard-Utils): aplikace na cvičení hry na klavír a další nástroje
-- [**Muzio**](https://muzio.tomandes.eu/): webová aplikace pro žáky ZUŠ
+- [**JáMuzikant**](https://jamuzikant.tomandes.eu/): webová aplikace pro žáky ZUŠ
 - [**KASPAR**](https://github.com/tomandesMSH/KASPAR): nástroje na úpravu a pročištění Windows
 
 Všechny projekty jsou na [tomandes.eu](https://tomandes.eu/).
